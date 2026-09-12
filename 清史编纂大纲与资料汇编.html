@@ -4,311 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>清史编纂大纲与资料汇编</title>
-<style>
-:root {
-  --primary: #8B0000;
-  --primary-light: #A52A2A;
-  --primary-dark: #5C0000;
-  --gold: #C5A55A;
-  --gold-light: #D4B36A;
-  --bg: #FDFBF7;
-  --bg-alt: #F5F0E8;
-  --text: #2C1810;
-  --text-light: #5C4030;
-  --border: #D4C4A8;
-  --card-bg: #FFFEFA;
-  --shadow: 0 2px 8px rgba(92, 0, 0, 0.08);
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: "Songti SC", "STSong", "SimSun", serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
-  font-size: 16px;
-}
-
-/* ===== 封面 ===== */
-.cover {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
-  color: #FFF;
-  text-align: center;
-  padding: 80px 40px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cover::before {
-  content: '';
-  position: absolute;
-  top: 20px; left: 20px; right: 20px; bottom: 20px;
-  border: 2px solid var(--gold);
-  opacity: 0.4;
-}
-
-.cover h1 {
-  font-size: 3.2em;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-}
-
-.cover .subtitle {
-  font-size: 1.3em;
-  color: var(--gold-light);
-  letter-spacing: 0.3em;
-  margin-bottom: 40px;
-}
-
-.cover .principles {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.cover .principle {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid var(--gold);
-  border-radius: 4px;
-  padding: 15px 30px;
-  font-size: 1.05em;
-  letter-spacing: 0.1em;
-}
-
-.cover .meta {
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: rgba(255,255,255,0.7);
-}
-
-/* ===== 目录 ===== */
-.toc {
-  background: var(--bg-alt);
-  padding: 50px 60px;
-  border-bottom: 3px solid var(--primary);
-}
-
-.toc h2 {
-  font-size: 1.8em;
-  color: var(--primary);
-  margin-bottom: 25px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--gold);
-}
-
-.toc ol {
-  list-style: none;
-  counter-reset: toc-counter;
-}
-
-.toc ol > li {
-  counter-increment: toc-counter;
-  margin-bottom: 12px;
-  font-size: 1.1em;
-}
-
-.toc ol > li::before {
-  content: counter(toc-counter, cjk-decimal) "、";
-  color: var(--primary);
-  font-weight: 700;
-  margin-right: 10px;
-}
-
-.toc ol ol {
-  counter-reset: toc-sub-counter;
-  margin-top: 8px;
-  margin-left: 40px;
-}
-
-.toc ol ol > li {
-  counter-increment: toc-sub-counter;
-  font-size: 0.9em;
-  color: var(--text-light);
-  margin-bottom: 6px;
-}
-
-.toc ol ol > li::before {
-  content: "(" counter(toc-sub-counter) ")";
-  margin-right: 8px;
-}
-
-/* ===== 正文 ===== */
-.content { padding: 0 60px 60px; }
-
-section {
-  margin-bottom: 60px;
-}
-
-section > h2 {
-  font-size: 2em;
-  color: var(--primary);
-  margin-bottom: 30px;
-  padding: 15px 0;
-  border-top: 3px double var(--primary);
-  border-bottom: 3px double var(--primary);
-  text-align: center;
-  letter-spacing: 0.15em;
-}
-
-section > h3 {
-  font-size: 1.5em;
-  color: var(--primary-dark);
-  margin: 30px 0 15px;
-  padding-left: 15px;
-  border-left: 5px solid var(--gold);
-}
-
-section > h4 {
-  font-size: 1.2em;
-  color: var(--text);
-  margin: 25px 0 10px;
-}
-
-p { margin-bottom: 12px; text-align: justify; }
-
-/* ===== 表格 ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 0.95em;
-  box-shadow: var(--shadow);
-  background: var(--card-bg);
-}
-
-th {
-  background: var(--primary);
-  color: #FFF;
-  padding: 12px 15px;
-  text-align: left;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-td {
-  padding: 10px 15px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-}
-
-tr:nth-child(even) td { background: var(--bg-alt); }
-tr:hover td { background: #F0E8D8; }
-
-/* ===== 卡片 ===== */
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 25px 30px;
-  margin: 20px 0;
-  box-shadow: var(--shadow);
-}
-
-.card-title {
-  font-size: 1.15em;
-  color: var(--primary-dark);
-  font-weight: 700;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px dashed var(--gold);
-}
-
-/* ===== 高亮框 ===== */
-.callout {
-  background: linear-gradient(135deg, #FFF9F0 0%, #FFF5E8 100%);
-  border-left: 4px solid var(--gold);
-  padding: 20px 25px;
-  margin: 20px 0;
-  border-radius: 0 6px 6px 0;
-}
-
-.callout-title {
-  font-weight: 700;
-  color: var(--primary-dark);
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
-
-/* ===== 分期标签 ===== */
-.period-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 3px;
-  font-size: 0.85em;
-  font-weight: 600;
-  margin-right: 8px;
-}
-
-.tag-rise { background: #D4EDDA; color: #155724; border: 1px solid #C3E6CB; }
-.tag-peak { background: #FFF3CD; color: #856404; border: 1px solid #FFEAA7; }
-.tag-decline { background: #F8D7DA; color: #721C24; border: 1px solid #F5C2C7; }
-.tag-fall { background: #D1ECF1; color: #0C5460; border: 1px solid #BEE5EB; }
-
-/* ===== 资源链接 ===== */
-.resource-link {
-  color: var(--primary);
-  text-decoration: none;
-  border-bottom: 1px dashed var(--gold);
-  word-break: break-all;
-}
-
-.resource-link:hover {
-  color: var(--primary-dark);
-  border-bottom-style: solid;
-}
-
-/* ===== 引用 ===== */
-.quote {
-  font-style: italic;
-  color: var(--text-light);
-  padding: 10px 20px;
-  border-left: 3px solid var(--border);
-  margin: 15px 0;
-  background: var(--bg-alt);
-}
-
-.quote-source {
-  display: block;
-  text-align: right;
-  font-size: 0.85em;
-  margin-top: 8px;
-  color: var(--text-light);
-}
-
-/* ===== 页脚 ===== */
-.footer {
-  background: var(--primary-dark);
-  color: rgba(255,255,255,0.7);
-  text-align: center;
-  padding: 30px 40px;
-  font-size: 0.9em;
-}
-
-.footer p { margin-bottom: 8px; }
-
-/* ===== 响应式 ===== */
-@media (max-width: 768px) {
-  .content { padding: 0 20px 40px; }
-  .toc { padding: 30px 25px; }
-  .cover { padding: 50px 20px; }
-  .cover h1 { font-size: 2em; }
-  .cover .principles { gap: 15px; }
-  table { font-size: 0.85em; }
-  th, td { padding: 8px 10px; }
-}
-
-/* ===== 打印 ===== */
-@media print {
-  .cover { background: #8B0000; -webkit-print-color-adjust: exact; }
-  section { page-break-after: auto; }
-  table { page-break-inside: avoid; }
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -316,7 +12,7 @@ tr:hover td { background: #F0E8D8; }
 <div class="cover">
   <h1>清 史</h1>
   <div class="subtitle">编 纂 大 纲 与 资 料 汇 编</div>
-  <div class="principles">
+  <div class="principles-box">
     <div class="principle">坚持人民史观</div>
     <div class="principle">遵循官方定位</div>
     <div class="principle">史料佐证叙事</div>
@@ -402,7 +98,7 @@ tr:hover td { background: #F0E8D8; }
   <div class="callout">
     <div class="callout-title">原则二：遵循当前官方对清朝的定位</div>
     <p>清朝是"统一多民族国家的定型时期"，"大一统格局进一步巩固发展"。编纂中须体现：清朝在巩固大一统格局、推进民族融合、奠定现代中国版图方面的历史贡献；"华夷一家""天下一家"理念；因俗而治、因地制宜的边疆治理原则。对历史人物的评价以生产力标准为根本，实事求是，全面客观。</p>
-    <div class="quote">
+    <div class="quote-block">
       "清代进一步巩固了统一多民族国家的大一统格局，是统一多民族国家的定型时期。"
       <span class="quote-source">——中国历史研究院副院长李国强（中国社会科学网，2024年4月）</span>
     </div>
@@ -984,7 +680,7 @@ tr:hover td { background: #F0E8D8; }
   </div>
 
   <h3>历史人物评价标准</h3>
-  <div class="quote">
+  <div class="quote-block">
     "历史不是由帝王将相决定的，历史是由人民群众、物质资料生产者决定的。但是帝王将相的活动可以在一定范围里对物质资料生产、生产力水平起促进或阻碍的作用。因此，只有根据他们的行动在这方面产生的实际结果判定这个人物应当肯定还是应当否定。"
     <span class="quote-source">——戴逸《论康熙》（1961年）</span>
   </div>
@@ -1192,7 +888,7 @@ tr:hover td { background: #F0E8D8; }
 
     <h4>闭关锁国（广州十三行制度）</h4>
     <p>乾隆二十二年（1757年），清廷关闭江浙闽三处海关，将海外贸易限定于广州一地，实行"一口通商"政策。广州十三行成为清政府实行"一口通商"政策下的官方特许外贸机构。</p>
-    <div class="quote">
+    <div class="quote-block">
       "禁海政策在贸易上实际达到了闭关或限关的效果，更大的危害则是放弃了向海洋拓展的努力，面对万里海疆，中国失去了可能成为海洋强国的资格。"
       <span class="quote-source">——欧阳哲生《盛世下的忧患——中西关系视角下的康雍乾盛世》</span>
     </div>
@@ -1316,10 +1012,11 @@ tr:hover td { background: #F0E8D8; }
   </table>
 </section>
 
+
 </div><!-- end content -->
 
 <!-- ===== 页脚 ===== -->
-<div class="footer">
+<div class="book-footer">
   <p>清史编纂大纲与资料汇编 · 待审核稿</p>
   <p>编纂原则：坚持人民史观 · 遵循官方定位 · 史料佐证叙事</p>
   <p>本文档基于网络公开资料整理，供审核后启动正式编纂工作</p>
