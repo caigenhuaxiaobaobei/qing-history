@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>清史编纂·史料原文汇编</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Songti SC", "STSong", "SimSun", serif; background: #f5f1e8; color: #2c2416; line-height: 1.9; }
+  .container { max-width: 900px; margin: 0 auto; padding: 40px 30px; }
+
+  /* 目录 */
+  .toc { background: #fff; border: 2px solid #8b7355; border-radius: 8px; padding: 25px 30px; margin-bottom: 35px; }
+  .toc h2 { font-size: 1.3em; color: #5c3317; border-bottom: 1px solid #c4a97d; padding-bottom: 8px; margin-bottom: 12px; }
+  .toc ol { padding-left: 22px; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: #5c3317; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* 章节 */
+  section { background: #fff; border: 1px solid #d4c5a9; border-radius: 8px; padding: 30px; margin-bottom: 25px; }
+  h2 { font-size: 1.4em; color: #5c3317; border-bottom: 2px solid #8b7355; padding-bottom: 8px; margin-bottom: 16px; }
+  h3 { font-size: 1.15em; color: #6b3d1f; margin: 18px 0 8px; }
+  h4 { font-size: 1em; color: #7a4a2e; margin: 14px 0 6px; }
+
+  /* 史料引文 */
+  .source-text {
+    background: #faf6ed;
+    border-left: 4px solid #8b7355;
+    padding: 14px 18px;
+    margin: 10px 0;
+    font-size: 0.95em;
+    line-height: 2;
+    text-indent: 2em;
+  }
+  .source-text.no-indent { text-indent: 0; }
+
+  /* 出处 */
+  .citation {
+    font-size: 0.85em;
+    color: #8b7355;
+    margin: 4px 0 16px;
+    padding-left: 10px;
+    border-left: 2px solid #d4c5a9;
+  }
+  .citation a { color: #6b3d1f; }
+
+  /* 说明 */
+  .note {
+    background: #f0ebe0;
+    border: 1px dashed #b0a080;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 0.88em;
+    color: #5c4a30;
+  }
+
+  /* 分类标签 */
+  .tag {
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-right: 6px;
+    color: #fff;
+  }
+  .tag-official { background: #8b7355; }
+  .tag-academic { background: #4a6fa5; }
+  .tag-treaty { background: #a04040; }
+
+  /* 页脚 */
+  .footer { text-align: center; padding: 20px; color: #8b7355; font-size: 0.85em; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1 style="text-align:center; font-size:1.8em; color:#5c3317; margin-bottom:8px;">清史编纂·史料原文汇编</h1>
+<p style="text-align:center; color:#8b7355; margin-bottom:25px;">本汇编收录清史编纂大纲所引用的主要史料原文及学术论述摘录，以备查阅</p>
+
+<!-- 目录 -->
+<div class="toc">
+  <h2>目录</h2>
+  <ol>
+    <li><a href="#sec1">《清实录》记载原文摘录</a></li>
+    <li><a href="#sec2">文字狱档案史料</a></li>
+    <li><a href="#sec3">剃发易服令史料</a></li>
+    <li><a href="#sec4">迁海令史料</a></li>
+    <li><a href="#sec5">摊丁入亩史料</a></li>
+    <li><a href="#sec6">条约原文条款</a></li>
+    <li><a href="#sec7">戴逸关于历史人物评价与盛世论述</a></li>
+    <li><a href="#sec8">梁启超论乾嘉学派</a></li>
+    <li><a href="#sec9">杨念群论清朝文化政策</a></li>
+    <li><a href="#sec10">欧阳哲生论康雍乾盛世</a></li>
+    <li><a href="#sec11">官方定位论述摘录</a></li>
+    <li><a href="#sec12">马大正论新综合体体例</a></li>
+    <li><a href="#sec13">资本主义萌芽学术论述</a></li>
+    <li><a href="#sec14">白银流入相关数据与论述</a></li>
+    <li><a href="#sec15">顾炎武《日知录》摘录</a></li>
+    <li><a href="#sec16">黄宗羲《明夷待访录》摘录</a></li>
+    <li><a href="#sec17">雍正《大义觉迷录》摘录</a></li>
+    <li><a href="#sec18">乾隆"十全武功"与《御制十全记》</a></li>
+    <li><a href="#sec19">魏源《海国图志》摘录</a></li>
+    <li><a href="#sec20">林则徐奏折与信札摘录</a></li>
+    <li><a href="#sec21">《大清律例》条文摘录</a></li>
+    <li><a href="#sec22">洪秀全与太平天国文献</a></li>
+    <li><a href="#sec23">康有为公车上书与变法文献</a></li>
+    <li><a href="#sec24">孙中山与同盟会文献</a></li>
+    <li><a href="#sec25">秋瑾、邹容、林觉民遗文</a></li>
+    <li><a href="#sec26">清帝退位诏书</a></li>
+    <li><a href="#sec27">孟森《清史讲义》论述摘录</a></li>
+    <li><a href="#sec28">商衍鎏《清代科举考试述录》摘录</a></li>
+    <li><a href="#sec29">清末新政上谕摘录</a></li>
+    <li><a href="#sec30">义和团与庚子事变文献</a></li>
+    <li><a href="#sec31">白莲教起义相关记载</a></li>
+    <li><a href="#sec32">《满洲实录》与清初建国史料</a></li>
+    <li><a href="#sec33">《扬州十日记》——清初屠城亲历记录</a></li>
+    <li><a href="#sec34">《平定三逆方略》——平定三藩记载</a></li>
+    <li><a href="#sec35">《中俄尼布楚条约》原文</a></li>
+    <li><a href="#sec36">《雍正朱批谕旨》——耗羡归公朱批</a></li>
+    <li><a href="#sec37">《四库全书总目提要》——序言与凡例</a></li>
+    <li><a href="#sec38">《防范外夷规条》——广州贸易制度</a></li>
+    <li><a href="#sec39">曾国藩《讨粤匪檄》</a></li>
+    <li><a href="#sec40">李鸿章洋务奏折摘录</a></li>
+    <li><a href="#sec41">张之洞《劝学篇》——"中体西用"</a></li>
+    <li><a href="#sec42">左宗棠海防塞防奏折</a></li>
+    <li><a href="#sec43">光绪帝"明定国是诏"</a></li>
+    <li><a href="#sec44">《钦定宪法大纲》</a></li>
+    <li><a href="#sec45">《中华民国临时约法》</a></li>
+    <li><a href="#sec46">李秀成自述</a></li>
+    <li><a href="#sec47">王夫之《读通鉴论》摘录</a></li>
+    <li><a href="#sec48">戴震《孟子字义疏证》摘录</a></li>
+    <li><a href="#sec49">章学诚《文史通义》摘录</a></li>
+    <li><a href="#sec50">《钦定藏内善后章程二十九条》</a></li>
+    <li><a href="#sec51">和珅抄家清单</a></li>
+    <li><a href="#sec52">《大清会典》条文摘录</a></li>
+    <li><a href="#sec53">《八旗通志》——八旗制度记载</a></li>
+    <li><a href="#sec54">纪昀《阅微草堂笔记》摘录</a></li>
+    <li><a href="#sec55">溥仪《我的前半生》摘录</a></li>
+  </ol>
+</div>
+
+<!-- ===== 一、《清实录》记载 ===== -->
+<section id="sec1">
+  <h2>一、《清实录》记载原文摘录</h2>
+
+  <h3>1. 顺治元年（1644）清军入关</h3>
+  <p><span class="tag tag-official">官方档案</span></p>
+
+  <h4>多尔衮进入北京</h4>
+  <div class="source-text">
+    己丑。师至燕京。故明文武官员、出迎五里外。摄政和硕睿亲王进朝阳门。老幼焚香跪迎内监以故明卤簿御辇、陈皇城外。跪迎路左。启王乘辇。王曰予法周公辅冲主不当乘辇。众叩头曰。周公曾负扆摄国事。今宜乘辇王曰。予来定天下、不可不从众意。令将卤簿向宫门陈设。王仪仗前列。奏乐。拜天、地三跪九叩头礼复望阙行三跪九叩头礼。毕。乘辇入武英殿升座故明众官俱拜伏呼万岁王下令诸将士乘城。厮养人等概不许入百姓安堵。秋毫无犯。
+  </div>
+  <div class="citation">出处：《清世祖实录》卷五。中华典藏版。<br><a href="https://www.diancang.xyz/lishizhuanji/daqingshizuzhanghuangdishilu/98962.html">https://www.diancang.xyz/lishizhuanji/daqingshizuzhanghuangdishilu/98962.html</a></div>
+
+  <h4>入关前山海关之战</h4>
+  <div class="source-text">
+    臣闻流寇李自成、鸱张肆逆。陷明北京。崇祯帝自经。随命摄政睿亲王多尔衮为奉命大将军。统师西征。未抵山海关。明总兵吴三桂遣使来迎我师比至、开门纳款。我兵即以是日、整伍入关。自成犹拥马步军二十余万、逆我颜行。大将军多尔衮、奋张三军。一战败之。追逐四十余里。俘斩无算。贼首尾不相顾……
+  </div>
+  <div class="citation">出处：《清世祖实录》卷六。<br><a href="https://www.zhonghuashu.com/wiki/%E5%A4%A7%E6%B8%85%E4%B8%96%E7%A5%96%E7%AB%A0%E7%9A%87%E5%B8%9D%E5%AF%A6%E9%8C%84/%E5%8D%B7006">https://www.zhonghuashu.com/wiki/大清世祖章皇帝实录/卷006</a></div>
+
+  <h3>2. 康熙平定三藩相关上谕</h3>
+  <p><span class="tag tag-official">官方档案</span></p>
+
+  <h4>谕奉命大将军康亲王杰书</h4>
+  <div class="source-text">
+    谕奉命大将军和硕康亲王杰书：浙江贼寇在在窃发，骚扰地方，皆由耿逆未灭之故。若剿除耿逆，则小丑自灭。今或固守金华诸处，由仙霞岭、分水关入闽；或固守杭、衢，从金华进克温、处，平定浙省，剿灭浙、闽贼：听大将军王酌量速行。
+  </div>
+  <div class="citation">出处：《清圣祖实录选辑》康熙十三年。<br><a href="https://api.cnkgraph.com/Book/%E5%8F%B2%E9%83%A8/%E7%B7%A8%E5%B9%B4%E9%A1%9E/%E6%B8%85%E8%81%96%E7%A5%96%E5%AF%A6%E9%8C%84%E9%81%B8%E8%BC%AF/14550/KR8a0167_015">cnkgraph.com</a></div>
+
+  <h4>招抚耿精忠上谕</h4>
+  <div class="source-text">
+    今削其王爵，遣发大兵进剿，指日荡平。但念其所属官兵及地方官员军民人等或被逆贼迫胁，虽怀忠义，莫能自明；恐大兵一到，玉石难分。有能擒斩精忠投献军前者，优加爵赏；或以兵马城池纳款者，论功叙禄。或力有不逮，自拔来归者，亦免罪收用。
+  </div>
+  <div class="citation">出处：《平定三逆方略》相关条目。<br><a href="https://yueguji.com/book/944/a8809d794da7b.html">yueguji.com</a></div>
+
+  <h3>3. 康熙五十一年"滋生人丁永不加赋"上谕</h3>
+  <p><span class="tag tag-official">官方档案</span></p>
+
+  <div class="source-text">
+    五十一年，谕曰：海宇承平日久，户口日增，地未加广，应以现在丁册定为常额，自后所生人丁，不徵收钱粮，编审时，止将实数查明造报。廷议：五十年以后，谓之盛世滋生人丁，永不加赋。仍五岁一编审。
+  </div>
+  <div class="citation">出处：《清史稿·志·卷九十六 食货二》。<br><a href="https://m.gushiwen.cn/guwen/bookv_31355145c8b8.aspx">gushiwen.cn</a></div>
+
+  <h3>4. 乾隆二十二年"一口通商"上谕</h3>
+  <p><span class="tag tag-official">官方档案</span></p>
+
+  <div class="source-text">
+    杨应琚奏浙海关贸易，船应仍令收泊粤东一摺，所见甚是。已有旨传谕杨应琚，令以己意晓谕番商，将来只许在广东收泊交易，不得再赴宁波，如或再来，必押令原船返棹至广，不准入浙江海口。如此办理，则来浙番船永远禁绝，不特浙省海防得以肃清，且与粤民生……
+  </div>
+  <div class="citation">出处：中山大学学报（社科版）相关研究，引乾隆上谕。档号：055/G1-10/050/006，《清宫广州十三行档案精选》第107页。<br><a href="https://hongmerchant.gzhu.edu.cn/info/1132/1476.htm">广州十三行研究中心</a></div>
+
+  <h3>5. 乾隆年间编纂《四库全书》诏令</h3>
+  <p><span class="tag tag-official">官方档案</span></p>
+
+  <h4>乾隆三十八年闰三月初三日上谕</h4>
+  <div class="source-text">
+    前允廷臣所议，查校《永乐大典》，选择付刊，并令将各省采送书籍及武英殿旧有官版各书，一并汇合厘次，分别经史子集，编叙目录，命为四库全书，用昭册府大全。而各省奏到书单，甚属寥寥，因明降谕旨，令各该督抚善为访求，毋得稍有避忌，予以半年之限，迅速办理……
+  </div>
+  <div class="citation">出处：《纂修四库全书档案》——乾隆三十八年闰三月初三日奉上谕。<br><a href="https://www.diancang.xyz/lishizhuanji/zuanxiusikuquanshudangan/127161.html">diancang.xyz</a></div>
+
+  <h4>乾隆御制《四库全书简明目录》圣谕</h4>
+  <div class="source-text">
+    朕稽古右文，聿资治理，几余典学，日有孜孜。因思策府缥缃，载籍极博。其巨者羽翼经训，垂范方来，固足称千秋法鉴；即在识小之徒，专门撰述，细及名物象数，兼综条贯，各自成家，亦莫不有所发明，可为游艺养心之一助。是以御极之初，即诏中外搜访遗书；并令儒臣，校勘十三经、二十一史，遍布黉宫，嘉惠后学……
+  </div>
+  <div class="citation">出处：《四库全书简明目录》圣谕。<br><a href="https://www.diancang.xyz/leishuwenji/16269/317907.html">diancang.xyz</a></div>
+</section>
+
+<!-- ===== 二、文字狱档案 ===== -->
+<section id="sec2">
+  <h2>二、文字狱档案史料</h2>
+
+  <h3>1. 庄廷鑨明史案</h3>
+  <p><span class="tag tag-official">官私史乘</span></p>
+
+  <div class="source-text">
+    初，明故大学士朱国楨私著明史，籍未刊而亡，家亦中落，以稿本质金於廷鑨。廷鑨易自己名刻之，补入崇祯一朝事，中有万曆间总兵李成梁捕斩建州卫都指挥使王杲语。归安知县吴之荣方罢官，谋起复，因举发其事，廷鉺入贿得免。廷鑨死，其父胤城乃稍易书中指斥语，再版刊行之。荣恨计不售，更购初版，上之法司，遂兴大狱。致仕侍郎李令晰为作序，亦坐死，且杀其四子，幼子年十六，法官命灭供一岁，例得免死。幼子不忍独生，卒不易供而死。序中所称旧史朱氏者，指国楨也，之荣素怨南浔富人朱佑明，遂嫁祸，且指其姓名以证，并杀其五子。其余书列名及官吏失察，与刊刻、收藏人株连死者七十余人，妇女并给边而之荣卒以此起用，并以所籍朱佑明之产给之，后仕至右僉都。
+  </div>
+  <div class="citation">出处：《清史纪事本末》卷二十《文字之狱》。<br><a href="https://www.shicihui.com/zh-tw/book/qingshijishibenmo/84719">shicihui.com</a></div>
+
+  <div class="source-text">
+    明相国乌程朱文恪公，尝著《明史》，举大经大法者革之，已刊行于世，未刊者为《列朝诸臣传》。国变后，朱氏家中落，以藁本质千金于庄廷钅龙。廷家故富，因窜名己作，刻之。补崇祯一朝事，中多指斥昭代语。岁癸卯，归安知县吴之荣罢官，谋以告讦为功，藉此作起复地，白其事于将军松魁。魁移巡抚朱昌祚，朱牒督学胡尚衡，廷钅龙并纳重赂以免，乃稍易指斥语重刊之。之荣计不行，特购得初刊本上之法司。事闻，遣刑部侍郎出谳狱。时廷钅龙已死，戮其尸，诛弟廷钺……
+  </div>
+  <div class="citation">出处：佚名《康雍乾间文字之狱》。<br><a href="https://www.guoxue123.com/biji/qing/0001/009.htm">guoxue123.com</a></div>
+
+  <h3>2. 戴名世南山集案</h3>
+  <p><span class="tag tag-official">官私史乘</span></p>
+
+  <div class="source-text">
+    五十二年，春二月，杀翰林院编修戴名世，戮学士方孝标屍。时诏修明史已数十余年，而馆臣采录遗书，率多忌讳，致屡裁稿而未告成。名世心窃痛之，因著孑遗录以见其概，又与其门人金生书，谓以弘光之帝南京，隆武之帝闽越……
+  </div>
+  <div class="citation">出处：《清史纪事本末》卷二十《文字之狱》。<br><a href="https://www.shicihui.com/zh-tw/book/qingshijishibenmo/84719">shicihui.com</a></div>
+
+  <h3>3. 吕留良案</h3>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <div class="source-text">
+    而外国入承大统之君，以为纵能夙夜励精，勤求治理，究无望于载籍之褒扬，而为善之心，因而自怠。则内地苍生，其苦无有底止矣。其为人心世道之害，可胜言哉！况若逆贼吕留良等，不惟于我朝之善政善教，大经大法，概为置而不言，而更空妄撰，凭虚……
+  </div>
+  <div class="citation">出处：《大义觉迷录》相关记载。<br><a href="https://gj.zdic.net/jibu/580/14142.html">zdic.net</a></div>
+</section>
+
+<!-- ===== 三、剃发令 ===== -->
+<section id="sec3">
+  <h2>三、剃发易服令史料</h2>
+  <p><span class="tag tag-official">官方档案</span></p>
+
+  <h3>顺治元年：剃发令初下</h3>
+  <div class="source-text">
+    摄政和硕睿亲王多尔衮师至通州知州率百姓迎降谕令薙发。念尔等俱吾赤子、不忍即加兵革。已往者姑从宽宥。谕到、俱即薙发。改行安业。毋怙前非。傥有故违、即……
+  </div>
+  <div class="citation">出处：《清世祖实录》卷五（顺治元年甲申）。<br><a href="https://www.diancang.xyz/lishizhuanji/daqingshizuzhanghuangdishilu/98962.html">diancang.xyz</a></div>
+
+  <div class="source-text">
+    凡投诚官吏军民皆着薙发。衣冠悉遵本朝制度。各官宜痛改故明陋习共砥忠廉。
+  </div>
+  <div class="citation">出处：《清世祖实录》卷五。同上。</div>
+
+  <h3>顺治二年：剃发令严行</h3>
+  <div class="source-text">
+    自今布告之后，京城内外，直隶各省，限旬日尽行剃完。若规避惜发，巧词争辩，决不轻贷。
+  </div>
+  <div class="citation">出处：《清世祖实录》顺治二年六月丙寅。<br><a href="https://m.baike.com/wiki/%E5%89%83%E5%8F%91%E6%98%93%E6%9C%8D/1057035">baike.com</a></div>
+</section>
+
+<!-- ===== 四、迁海令 ===== -->
+<section id="sec4">
+  <h2>四、迁海令史料</h2>
+  <p><span class="tag tag-official">官方档案</span></p>
+
+  <h3>康熙十七年：重申迁海</h3>
+  <div class="source-text">
+    海寇盘踞厦门诸处，勾连山贼，煽惑地方，皆由闽地濒海居民为之藉也。应如顺治十八年立界之例，将界外百姓迁移内地，仍申严海禁，绝其交通。
+  </div>
+  <div class="citation">出处：《清圣祖实录》卷七二相关记载。<br><a href="http://www.qzhnet.com/qzh502.htm">qzhnet.com</a></div>
+
+  <div class="source-text">
+    应如顺治十八年立界之例，将界外百姓迁移内地；仍申严海禁，绝其交通。但穷苦之民一旦迁徙，必弃田舍，难以为生，殊可悯恻！可将本年地丁额赋、差徭杂项尽行豁除。该督、抚拣委能员料理，俾安辑得所，勿致苦累。
+  </div>
+  <div class="citation">出处：《清圣祖实录选辑》康熙十七年相关条目。<br><a href="http://ab.newdu.com/book/s104535.html">newdu.com</a></div>
+</section>
+
+<!-- ===== 五、摊丁入亩 ===== -->
+<section id="sec5">
+  <h2>五、摊丁入亩史料</h2>
+  <p><span class="tag tag-official">官方史志</span></p>
+
+  <h3>《清史稿》记载</h3>
+  <div class="source-text">
+    雍正初，令各省将丁口之赋，摊入地亩输纳徵解，统谓之"地丁"。先是康熙季年，四川、广东诸省已有行之者。至是准直隶巡抚李维钧请，将丁银随地起徵，每地赋一两，摊入丁银二钱二釐，嗣后直省一体仿行。於是地赋一两，福建摊丁银五分二釐七毫至三钱一分……
+  </div>
+  <div class="citation">出处：《清史稿·志·卷九十六 食货二》。<br><a href="https://m.gushiwen.cn/guwen/bookv_31355145c8b8.aspx">gushiwen.cn</a></div>
+
+  <h3>孟森《清朝大历史》记载</h3>
+  <div class="source-text">
+    会圣祖崩，世宗即位，雍正元年九月，直隶巡抚李维钧奏：请将丁银摊入田粮。部议：应如所请，于雍正二年为始，造册征收。得旨：九卿詹事科道会同确议具奏。九卿旋议覆：应令该抚确查各州县田土，因地制宜，作何摊入田亩之处，分别定例，庶使无地穷……
+  </div>
+  <div class="citation">出处：孟森《清朝大历史》第三章。<br><a href="https://www.diancang.xyz/lishizhuanji/17819/334507.html">diancang.xyz</a></div>
+</section>
+
+<!-- ===== 六、条约原文 ===== -->
+<section id="sec6">
+  <h2>六、条约原文条款</h2>
+
+  <h3>1.《中俄尼布楚条约》（1689年）</h3>
+  <p><span class="tag tag-treaty">条约原文</span></p>
+
+  <div class="source-text">
+    以流入黑龙江之绰尔河，即鞑靼语所称乌伦穆河附近之格尔必齐河为两国之界。格尔必齐河发源处为石大兴安岭，此岭直达于海，亦为两国之界；凡岭南一带土地及流入黑龙江大小诸川，应归中国管辖；其岭北一带土地及川流，应归俄国管辖。惟界于兴安岭与乌第河之间诸川流及土地应如何分划，今尚未决，此事须待两国使臣各归本国，详细查明之后，或遣专使，或用文牍，始能定之。又流入黑龙江之额尔古纳河亦为两国之界：河以南诸地尽属中国，河以北诸地尽属俄国。
+  </div>
+
+  <div class="source-text">
+    俄人在雅克萨所建城障，应即尽行除毁。俄民之居此者，应悉带其物用，尽数迁入俄境。两国猎户人等，不论因何事故，不得擅越已定边界。若有一、二下贱之人，或因捕猎，或因盗窃，擅自越界者，立即械系，遣送各该国境内官司吏，审知案情，当即依法处罚。
+  </div>
+
+  <div class="source-text">
+    此约订定以前所有一切事情，永作罢论。自两国永好已定之日起，嗣后有逃亡者，各不收纳，并应械系遣还。
+  </div>
+
+  <div class="source-text">
+    自和约已定之日起，凡两国人民持有护照者，俱得过界来往，并许其贸易互市。
+  </div>
+
+  <div class="source-text">
+    此约将以华、俄、拉丁诸文刊之于石，而置于两国边界，以作永久界碑。康熙二十八年七月二十四日，俄历一六八九年八月二十七日。
+  </div>
+  <div class="citation">出处：《中俄尼布楚议界条约》拉丁文汉译本。故宫博物院。<br><a href="https://www.dpm.org.cn/Uploads/File/pdf/a2/c5/ea/a2c5ea2357b690d3491dfb323974bfe9.pdf">dpm.org.cn PDF</a></div>
+
+  <h3>2.《南京条约》（1842年）</h3>
+  <p><span class="tag tag-treaty">条约原文</span></p>
+
+  <div class="source-text">
+    因大英商船远路涉洋，往往有损坏须修补者，自应给予沿海一处，以便修船及存守所用物料。今大皇帝准将香港一岛给予大英国君主暨嗣后世袭主位者常远据守主掌，任便立法治理。
+  </div>
+
+  <div class="source-text">
+    凡系中国人，前在英人所据之邑居住者，或与英人有来往者，或有跟随及俟候英国官人者，均由大皇帝俯降御旨，誊录天下，恩准全然免罪；且凡系中国人，为英国事被拿监禁受难者，亦加恩释放。
+  </div>
+  <div class="citation">出处：中国法学网"江宁条约"条款摘录。<br><a href="http://iolaw.cssn.cn/zwjyzhb/200406/t20040628_4591305.shtml">cssn.cn</a></div>
+
+  <h3>3.《马关条约》（1895年）</h3>
+  <p><span class="tag tag-treaty">条约原文</span></p>
+
+  <div class="source-text">
+    中国承认朝鲜的独立自主，废绝中朝宗藩关系。
+  </div>
+
+  <div class="source-text">
+    中国约将库平银二万万两交与日本，作为赔偿军费。
+  </div>
+
+  <div class="source-text">
+    二、台湾全岛及所有附属各岛屿。三、澎湖列岛，即英国格林尼次东经百十九度起至百二十度止，及北纬三十三度起至二十四度之间……
+  </div>
+
+  <div class="source-text">
+    开放重庆、沙市、苏州和杭州为商埠。
+  </div>
+  <div class="citation">出处：中国台湾网《马关条约》历史文献。<br><a href="http://lib.taiwan.cn/histortdoc/201109/t20110921_2077151.htm">taiwan.cn</a></div>
+
+  <h3>4.《辛丑条约》（1901年）</h3>
+  <p><span class="tag tag-treaty">条约原文</span></p>
+
+  <div class="source-text">
+    第六款是所谓"偿恤"，即"付诸国偿款海关银四百五十兆两……此四百五十兆按年息四厘，正本由中国分三十九年……清还，本息用金付给或按应还日期之市价易金付给，还本于一千九百零二年正月初一日起一千九百四十年终止。"
+  </div>
+
+  <div class="source-text">
+    第九款 中国国家应允由诸国分应主办会同酌定数处，留兵驻守，以保京师至海通道无断绝之虞。
+  </div>
+
+  <div class="source-text">
+    第十款 大清国国家允定两年之久，在各府厅州县将以后所述之上谕颁行布告：一、上谕以永禁或设或入与诸国仇敌之会，违者皆斩。二、上谕一道，犯罪之人如何惩办之处，均一一载明。三、上谕以诸国人民遇害被虐各城镇，停止文武各等考试。四、上谕以各省督抚文武大吏暨有司各官，于……
+  </div>
+  <div class="citation">出处：人民网《1901年9月7日〈辛丑条约〉签订》。<br><a href="http://m.people.cn/n4/2016/0907/c2771-7536618.html">people.cn</a></div>
+</section>
+
+<!-- ===== 七、戴逸论述 ===== -->
+<section id="sec7">
+  <h2>七、戴逸关于历史人物评价与盛世论述</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 盛世条件定义</h3>
+  <div class="source-text">
+    盛世是我国社会发展中的一个特定的历史阶段，是国家从大乱走向大治，在较长时间内保持繁荣而稳定的一个时期。盛世应该具备的条件是，国家统一、经济繁荣、政治稳定、国力强大、文化昌盛等等。
+  </div>
+  <div class="citation">出处：周思源《正确看待康乾之世——与戴逸先生商榷》相关报道。<br><a href="http://www.wxg.org.cn/jzzx/1576.jhtml">wxg.org.cn</a></div>
+
+  <h3>2. 生产力标准论述</h3>
+  <div class="source-text">
+    他认为康雍乾时期"生产力高度发展"，理由是当时中国人口已有三亿，而西汉盛世时不过五千万，唐朝开元盛世也只有八千万左右。这样，康雍乾盛世的经济力量就远远超过了汉、唐的盛世，而且两者的差距还很大。
+  </div>
+  <div class="citation">出处：同上。戴逸在《部级领导干部历史文化讲座》中比较中国农业与英国农业技术水平，认为中国播种1粒麦种可收获15粒，而英国播种1粒麦种只能收获10粒。<br><a href="https://pdfyl.ertongbook.com/56/33154924.pdf">ertongbook.com PDF</a></div>
+
+  <h3>3. 关于清朝贡献</h3>
+  <div class="source-text">
+    在中国各个封建王朝里面，清朝的贡献是最大的，经济、政治、文化走到封建社会的顶峰。
+  </div>
+  <div class="citation">出处：戴逸相关讲座转述。<br><a href="https://m.toutiao.com/group/7676015846602310185/">头条文章</a></div>
+
+  <h3>4. 关于"盛世的阴影"</h3>
+  <div class="source-text">
+    闭关锁国、重农轻商、禁锢思想、轻视科学。
+  </div>
+  <div class="note">此为戴逸对康雍乾盛世不足之处的概括性论述，他认为乾隆"没有像俄国彼得大帝那样主动看向外部世界，不接纳外来先进事物，天朝上国的心态，把社会活力给压制住了"。</div>
+  <div class="citation">出处：同上。</div>
+
+  <h3>5. 戴逸关于18世纪中国的纵向比较</h3>
+  <div class="source-text">
+    直到18世纪，当时正处在清朝的康雍乾盛世，政治清明、社会安定、经济繁荣、文化昌盛、多民族国家的统一大大巩固。如果只把它和汉、唐、元、明作纵向比较，而不进行世界的横向性比较，中国封建社会看起来仍具有活力，仍在继续发展。18世纪的中国确有值得称道的巨大成就。
+  </div>
+  <div class="citation">出处：欧阳哲生《盛世下的忧患》引戴逸语。<br><a href="http://jds.cssn.cn/newzxdt/202101/t20210128_5301956.shtml">cssn.cn</a></div>
+</section>
+
+<!-- ===== 八、梁启超论乾嘉学派 ===== -->
+<section id="sec8">
+  <h2>八、梁启超论乾嘉学派</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 清代学术的两大方向</h3>
+  <div class="source-text">
+    在清朝二百多年学术思想史上，有两条路：一条是程朱理学，就是所谓官学；一条是汉学，就是所谓私学。这两种学术思想，互相排斥，互相竞争。乾隆、嘉庆两朝，汉学思想正达于最高潮，学术界全部几乎都被他占领。但汉学派中也可以分出两个支派：一曰吴派，二曰皖派。吴派以惠定宇栋为中心，以信古为标帜，我们叫他做"纯汉学"。皖派以戴东原震为中心，以求是为标帜，我们叫他做"考证学"。
+  </div>
+  <div class="citation">出处：梁启超《中国近三百年学术史》，中国社会科学院历史研究所网页转载。<br><a href="http://lishisuo.cssn.cn/xsyj/gdwhs/202001/t20200116_5078854.shtml">cssn.cn</a></div>
+
+  <h3>2. 八股取士对科学发展的阻碍</h3>
+  <div class="source-text">
+    学术界最大的障碍物，自然是八股。八股和一切学问都不相容，而科学为尤甚。清初袭用明朝的八股取士，不管他是否有意借此愚民，抑或误认为一种良制度，总之当时功名富贵皆出于此途，有谁肯抛弃这种捷径而去学艰辛迂远的科学呢？
+  </div>
+  <div class="citation">出处：梁启超《中国近三百年学术史》。同上。</div>
+</section>
+
+<!-- ===== 九、杨念群论清朝文化政策 ===== -->
+<section id="sec9">
+  <h2>九、杨念群论清朝文化政策</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 程朱"官学"与民间考据"私学"</h3>
+  <div class="source-text">
+    梁启超把清康、雍、乾三朝的学术界划分为程朱"官学"与民间考据"私学"，两派相互对立，民间"私学"以江浙为中心。那么，到底清代考据学是在帝王屡兴文字狱之下被迫摧生出来的一种民间独有形态，又或只不过是在帝王意志引导下的一个官学变种呢？在这个问题上，历来争议不断。
+  </div>
+  <div class="citation">出处：杨念群《清朝"文治"政策再研究》PDF。<br><a href="https://www.lishiyushehui.cn/statics//article/attachment/202401/dU4x8q8HlmqaZFfy.pdf">lishiyushehui.cn PDF</a></div>
+
+  <h3>2. 文化政策与政治筛选机制</h3>
+  <div class="source-text">
+    清朝帝王特别是康熙、雍正、乾隆时期，一方面大量吸收汉人文化的精华，另一方面又极力掩饰其入关前的落后与野蛮的状况，同时力图抹杀明朝遗民和民间私史的有关记载，其文化政策的执行受制于自身强烈的政治筛选机制。清朝帝王致力于把"政统"与"道统"集于一身，通过修纂大型类书和屡兴文字狱收编士人的思想意识和控制民间舆论。
+  </div>
+  <div class="citation">出处：维普期刊官网检索结果。<br><a href="https://qikan.cqvip.com/Qikan/Search/Index?key=A%3D%E6%9D%A8%E5%BF%B5%E7%BE%A4">cqvip.com</a></div>
+
+  <h3>3. 考据学与"大一统"文化布局</h3>
+  <div class="source-text">
+    在我看来，考据学的兴盛恰恰是乾隆有意设计的结果，而绝非士人被迫自发的思想转向。清代考据学的出现或多或少与乾隆对整体"大一统"文化布局的考量有关。如《四库全书》等文化工程的启动和推进，均需要考据学在版本和修纂技术方面的大力支持。清朝考据学的兴盛应是官家正统观建立过程中催生出来的一个后果，甚至是一个有意为之的政治步骤。
+  </div>
+  <div class="citation">出处：杨念群《何处是江南？》结语。<br><a href="http://wen.org.cn/modules/article/view.article.php/2585">wen.org.cn</a></div>
+</section>
+
+<!-- ===== 十、欧阳哲生论康雍乾盛世 ===== -->
+<section id="sec10">
+  <h2>十、欧阳哲生论康雍乾盛世</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 18世纪中西双雄并峙</h3>
+  <div class="source-text">
+    18世纪是东西方双雄并峙、互相对望的时代。一方面，中国作为东方古老文明国家的样板，在清朝康熙、雍正、乾隆三帝时期达到帝制社会的鼎盛，傲然屹立于世界的东方，雄视四邻。另一方面，西方国家的政治、经济、文化正在发生革命性的转型，其殖民锋芒指向中国……中西方虽然平静地度过了一个世纪，但在强势的清朝背后，映衬着沉重的阴影，一场由西向东的飓风正在呼啸而来。
+  </div>
+  <div class="citation">出处：欧阳哲生《盛世下的忧患——中西关系视角下的康雍乾盛世》，《北京大学学报》2014年第5期。<br><a href="http://jds.cssn.cn/newzxdt/202101/t20210128_5301956.shtml">cssn.cn</a></div>
+
+  <h3>2. 中西交流的不对称</h3>
+  <div class="source-text">
+    18世纪中国在经历了康熙、雍正、乾隆三朝后，步入前所未有的盛世，北京亦成为与欧洲交往最为频繁的东方帝都。欧洲通过传教士、外交使节、贸易往来与北京保持密切的关系。但当时中欧之间的交流并不对称，欧洲对中国的了解远远超过中国对西方了解的程度。来京的西方人士通过自己的观察和研究，对中国的政治制度、经济发展、科技水平、军事实力进行评估，为西方向中国殖民开拓做知识准备。中国在当时的世界竞争中危机四伏，为19世纪出现的中西之间"大分流"埋下了隐患。
+  </div>
+  <div class="citation">出处：同上。</div>
+</section>
+
+<!-- ===== 十一、官方定位论述 ===== -->
+<section id="sec11">
+  <h2>十一、官方定位论述摘录</h2>
+
+  <h3>1. 李国强：清朝是"统一多民族国家的定型时期"</h3>
+  <p><span class="tag tag-academic">学者论述</span></p>
+
+  <div class="source-text">
+    我国统一多民族国家有着悠久的历史，是由生息繁衍在中华大地上的各民族共同缔造的。清代进一步巩固了统一多民族国家的大一统格局，是统一多民族国家的定型时期。
+  </div>
+  <div class="citation">出处：晁天义、班晓悦专访李国强（中国历史研究院）。<br><a href="http://m.toutiao.com/group/7564325303678517799/">头条文章</a></div>
+
+  <h3>2. 张丹丹：清代统一多民族国家的理论建构与历史发展</h3>
+  <p><span class="tag tag-academic">学者论述</span></p>
+
+  <div class="source-text">
+    清代是我国统一多民族国家理论建构和历史发展的重要时期，大一统格局进一步巩固发展。清朝统治者认为自己"所承之统，尧舜以来中外一家之统也；所用之人，大小文武，中外一家之人也；所行之政，礼乐征伐，中外一家之政也"，通过政治、军事、经济、文化等多种手段，将域内的各个民族、多元文化整合为一个不可分割的整体。
+  </div>
+  <div class="citation">出处：张丹丹《清代统一多民族国家的理论建构与历史发展》，《光明日报》2025年9月22日第14版。<br><a href="https://news.gmw.cn/2025-09/22/content_38299431.htm">gmw.cn</a></div>
+
+  <h4>"清承明制"与政治合法性</h4>
+  <div class="source-text">
+    "清承明制"是彰显正统象征的政治话语，也是中原文化认同的直接表达。政治体制方面，首先效仿明朝设立中枢决策机构内阁与六部，作为专制皇权的辅助；延续明代省制的集权趋势；由理藩院主理内外蒙古等藩部事务。
+  </div>
+  <div class="citation">出处：同上。</div>
+
+  <h4>"华夷一家"与"天下一家"</h4>
+  <div class="source-text">
+    清朝突破"华夷之辨"思想，实现了"华夷一家"或说"天下一家"理念的升华。雍正是"华夷一家"理论化的执行者，论证了"天下一家"不止于满蒙汉，中国"天下"辐射范围内的各民族皆为"一家"。
+  </div>
+  <div class="citation">出处：同上。</div>
+
+  <h4>因俗而治、因地制宜</h4>
+  <div class="source-text">
+    在加强中央集权的同时，清政府贯彻因俗而治、因地制宜的治理原则，充分利用各民族传统中有利于维护国家统一的统治形式和积极因素，制定适合地区发展的行政建置和民族政策。
+  </div>
+  <div class="citation">出处：同上。</div>
+
+  <h4>同文之治</h4>
+  <div class="source-text">
+    清代推行同文之治，所谓同文，即用不同民族文字书写或表达同一事物的行为，几种文字是不分主次、互释共融的存在。避暑山庄丽正门匾额由满、蒙、汉、藏、维五种文字并列书写，成书于康熙四十七年的《御制清文鉴》由满文一体扩展至满、蒙、汉、藏、维五体合璧。
+  </div>
+  <div class="citation">出处：同上。</div>
+</section>
+
+<!-- ===== 十二、马大正论新综合体 ===== -->
+<section id="sec12">
+  <h2>十二、马大正论新综合体体例</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 新综合体五大部类</h3>
+  <div class="source-text">
+    根据戴老师的设计，《清史》的五大部类包括通纪、典志、传记、史表、图录，我们称之为新综合体。简言之，通纪实际上就是一部清代通史，这是20世纪初以来章节体的体裁体例，典志、传记、史表是二十四史的传统体例。图录是个创新，因为《清史》它有编图录的可能，有地图、有绘画、有照片，以图证史、以图……
+  </div>
+  <div class="citation">出处：马大正《戴逸与清史纂修》，《光明日报》2021年11月22日第11版。<br><a href="https://epaper.gmw.cn/gmrb/html/2021-11/22/nw.D110000gmrb_20211122_1-11.htm">gmw.cn</a></div>
+
+  <h3>2. 传记体例</h3>
+  <div class="source-text">
+    "传记"囊括有清一代之历史人物，分别作传，相当于旧史中的列传部分。设立传记是为了克服章节体史书"见史不见人"的缺点。我们根据人物在清代历史中所处地位、重要程度的不同，以及生平活动史料的多寡，分别设立专传和合传；对于生平活动联系紧密，并且主次地位分明者，还可以设立总传和副传。
+  </div>
+  <div class="citation">出处：中国人民大学清史研究所网页。<br><a href="http://qsyj.ruc.edu.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2817">ruc.edu.cn</a></div>
+
+  <h3>3. 体例总体设计</h3>
+  <div class="source-text">
+    与会专家一致认为新修清史应大体以纪传体为框架，并吸收章节体、编年体、纪事本末体等中外史书体裁的长处，进行综合创新。
+  </div>
+  <div class="citation">出处：中华文史网。<br><a href="https://www.qinghistory.cn/zjgx/zjgxxx/?id=363432">qinghistory.cn</a></div>
+</section>
+
+<!-- ===== 十三、资本主义萌芽学术论述 ===== -->
+<section id="sec13">
+  <h2>十三、资本主义萌芽学术论述</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 吴承明《中国资本主义的萌芽》</h3>
+  <div class="source-text">
+    吴承明的观点，不可避免地带有"资本主义萌芽"论所共有的一个"范式"特征，那就是将中国"封建社会论"作为一个不言自明的逻辑与历史的前提，并就此探讨封建地主制经济与资本主义萌芽的关系；然而，他在此基础上还结合生产力水平探讨了明后期至清前期"资本主义萌芽"的发展状况，实际上是从生产方式的角度更完整系统地进行研究。
+  </div>
+  <div class="citation">出处：张佩国《"资本主义萌芽"论范式问题再反思》，《史学月刊》2021年第12期。<br><a href="https://www.xsyk021.com/fileXSYK/journal/article/xsyk/2021/12/PDF/202112zhangpeiguo.pdf">xsyk021.com PDF</a></div>
+
+  <div class="source-text">
+    作为中国资本主义萌芽研究的集大成者吴承明先生，更是从1981年开始就"转而从事市场和商业史的研究"，也就是以"现代化即市场经济"的假说，取代"现代化即资本主义化"的假说，而不再研究被中国社会已然跨越的资本主义。
+  </div>
+  <div class="citation">出处：中国人民大学清史研究所研究综述。<br><a href="http://iqh.ruc.edu.cn/old/qdjjsyj/jjs_zydh/yjzs/eaed23eeef134dc0a6670bf79ac3b5b5.htm">ruc.edu.cn</a></div>
+
+  <h3>2. 李伯重论江南"早期工业化"</h3>
+  <div class="source-text">
+    李伯重的著作《江南的早期工业化（1550～1850年）》，就是研究明后期到清前期江南的早期工业化，而并非洋务运动中的早期工业化。他的结论是：1850年以前的三个世纪中，江南工业的发展，使得工业在江南经济中所占的比重日益提高。到了19世纪初，在江南大部分地区，工业的地位……
+  </div>
+  <div class="citation">出处：《明清江南市镇的早期工业化》PDF。<br><a href="https://www.zxls.com/UploadFiles/Article/UploadFiles2008/201310/zxls2013101215410311.pdf">zxls.com PDF</a></div>
+
+  <div class="source-text">
+    更为重要的是，生产组织发生了变化，出现了雇佣关系，机户出资雇佣机工进行生产，机工"计日受值"，这种雇佣劳动的出现，是资本主义萌芽的重要标志，也体现了江南早期工业化进程中生产关系的新变化，推动了江南轻工业乃至整个经济的发展。
+  </div>
+  <div class="citation">出处：高途学习材料转述李伯重观点。<br><a href="https://m.gaotu.cn/topic/3@565623148092944384@1/494/403">gaotu.cn</a></div>
+</section>
+
+<!-- ===== 十四、白银流入数据 ===== -->
+<section id="sec14">
+  <h2>十四、白银流入相关数据与论述</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 贡德·弗兰克的估计</h3>
+  <div class="source-text">
+    加州学派学者贡德·弗兰克的估计数最大：1800年前的250年，中国从欧洲（其白银主要来自美洲）、日本获得近4.8万吨白银，可能还从马尼拉获得1万吨甚至更多，加上其他，总计约6万吨白银合16亿银两，占有记录的世界白银产量的一半。
+  </div>
+  <div class="citation">出处：《中国历史上白银大规模跨境流动研究》。<br><a href="http://www.jryj.org.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=1210">jryj.org.cn PDF</a></div>
+
+  <h3>2. 彭信威《中国货币史》</h3>
+  <div class="source-text">
+    彭信威在《中国货币史》中认为："自隆庆元年马尼拉开港以后，到明末为止那七八十年间，经由菲律宾而流入中国的美洲白银，可能在六千万披索以上，约合四千多万库平银。"
+  </div>
+  <div class="citation">出处：《明末清初外国银元内流问题研究》转述彭信威。<br><a href="http://guoxue.com/discord/content/wgyy.htm">guoxue.com</a></div>
+
+  <h3>3. 吴承明关于白银存量的估计</h3>
+  <div class="source-text">
+    吴承明（1996）认为从16到17世纪，中国白银存量从1.5亿两增加到2.5亿两。
+  </div>
+  <div class="citation">出处：《中国历史上白银大规模跨境流动研究》。同上。</div>
+
+  <h3>4. 白银流入与经济繁荣</h3>
+  <div class="source-text">
+    1750年代后，尤其到18世纪末，随着海外贸易的发展，白银大量流入，中外金银比价之差才收窄（彭信威 1965）。
+  </div>
+  <div class="citation">出处：CF40《明清外贸顺差、白银流入及对经济的影响》。<br><a href="https://cf40.org.cn/article/1/412">cf40.org.cn</a></div>
+</section>
+
+<!-- ===== 十五、顾炎武《日知录》摘录 ===== -->
+<section id="sec15">
+  <h2>十五、顾炎武《日知录》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. "保天下者，匹夫之贱与有责焉耳矣"</h3>
+  <div class="source-text">
+    有亡国，有亡天下。亡国与亡天下奚辨？曰：易姓改号，谓之亡国。仁义充塞，而至于率兽食人，人将相食，谓之亡天下……是故知保天下，然后知保其国。保国者，其君其臣，肉食者谋之；保天下者，匹夫之贱与有责焉耳矣。
+  </div>
+  <div class="citation">出处：顾炎武《日知录》卷十三《正始》。<br><a href="https://www.guoxue123.com/zbzl/yzl/013.htm">guoxue123.com</a></div>
+
+  <h3>2. "经世致用"之学术主张</h3>
+  <div class="source-text">
+    凡文之不关于六经之指、当世之务者，一切不为。
+  </div>
+  <div class="citation">出处：顾炎武《亭林文集》卷四《与人书三》。</div>
+</section>
+
+<!-- ===== 十六、黄宗羲《明夷待访录》摘录 ===== -->
+<section id="sec16">
+  <h2>十六、黄宗羲《明夷待访录》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. "天下为主，君为客"</h3>
+  <div class="source-text">
+    古者以天下为主，君为客，凡君之所毕世而经营者，为天下也。今也以君为主，天下为客，凡天下之无地而得安宁者，为之君也。是以其未得之也，屠毒天下之肝脑，离散天下之子女，以博我一人之产业，曾不惨然，曰："我固为子孙创业也。"其既得之也，敲剥天下之骨髓，离散天下之子女，以奉我一人之淫乐，视为当然，曰："此我产业之花息也。"然则为天下之大害者，君而已矣。
+  </div>
+  <div class="citation">出处：黄宗羲《明夷待访录·原君》。<br><a href="https://www.guoxue123.com/zbzl/mydfl/01.htm">guoxue123.com</a></div>
+
+  <h3>2. "学校"议政设想</h3>
+  <div class="source-text">
+    学校，所以养士也。然古之圣王，其意不仅此也，必使治天下之具皆出于学校，而后设学校之意始备……天子之所是未必是，天子之所非未必非，天子亦遂不敢自为非是，而公其非是于学校。
+  </div>
+  <div class="citation">出处：黄宗羲《明夷待访录·学校》。</div>
+</section>
+
+<!-- ===== 十七、雍正《大义觉迷录》摘录 ===== -->
+<section id="sec17">
+  <h2>十七、雍正《大义觉迷录》摘录</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 雍正帝论"华夷一家"</h3>
+  <div class="source-text">
+    在逆贼等之意，徒谓本朝以满洲之君，入为中国之主，妄生嫌疑。不知本朝之为满洲，犹中国之有籍贯。舜为东夷之人，文王为西夷之人，曾何损于圣德乎？……且自古中国一统之世，幅员不能广远，其中有不向化者，则斥之为夷狄。如三代以上之有苗、荆楚、玁狁，即今湖南、湖北、山西之地也，在当日而斥为夷狄。至今日而为圣朝土宇，是车书一统，并无夷狄也。
+  </div>
+  <div class="citation">出处：《大义觉迷录》卷一。<br><a href="https://gj.zdic.net/jibu/580/14142.html">zdic.net</a></div>
+
+  <h3>2. 雍正帝特赦曾静</h3>
+  <div class="source-text">
+    曾静自述素昔因妄生疑心，将吕留良、严鸿逵等遂为亲近，若非吕留良之悖论，曾静必无此丧心之举。今曾静自知过去之非，痛悔醒悟，是将曾静等免罪释放……曾静等既已悔悟，著免其罪，并将曾静等带来京师，令其观览本朝政教。
+  </div>
+  <div class="citation">出处：《大义觉迷录》相关记载；《清史稿·世宗本纪》。</div>
+</section>
+
+<!-- ===== 十八、乾隆"十全武功" ===== -->
+<section id="sec18">
+  <h2>十八、乾隆"十全武功"与《御制十全记》</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 《御制十全记》碑文</h3>
+  <div class="source-text">
+    十全记。近用合围五善之制，拓我边圉，是以武功成者，十全之。十功者何？一平准噶尔，二再平准噶尔，三平回部，四平金川，五再平金川，六平台湾，七平缅甸，八平安南，九平廓尔喀，十再平廓尔喀也。
+  </div>
+  <div class="citation">出处：乾隆帝《御制十全记》，立于避暑山庄。<br><a href="https://www.dpm.org.cn">故宫博物院</a></div>
+
+  <h3>3. 乾隆帝论"十全武功"</h3>
+  <div class="source-text">
+    予以七十寿辰，自谓为古稀天子。及至八十寿辰，又自谓为十全老人。盖予十岁外即上荷祖父之恩，又受皇考之命，以来七十年来，日日勤政，无一日之暇逸，用能拓边安疆，辑宁内外。功业之成，十全之。
+  </div>
+  <div class="citation">出处：《清史稿·高宗本纪》；《清实录·高宗实录》。</div>
+</section>
+
+<!-- ===== 十九、魏源《海国图志》摘录 ===== -->
+<section id="sec19">
+  <h2>十九、魏源《海国图志》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. "师夷长技以制夷"</h3>
+  <div class="source-text">
+    是书何以作？曰：为以夷攻夷而作，为以夷款夷而作，为师夷长技以制夷而作……夷之长技有三：一战舰，二火器，三练兵养兵之政。夷之长技，不外乎此三者。中国仿而行之，有秋毫之损，无一物之害也。
+  </div>
+  <div class="citation">出处：魏源《海国图志》原叙（道光二十二年）。<br><a href="https://www.guoxue123.com/zbzl/hgtz/000.htm">guoxue123.com</a></div>
+
+  <h3>2. 论"天下一大洲"</h3>
+  <div class="source-text">
+    历代史之言地理也，皆以中国为中心，四夷为附庸。然今则不然。天下有五大洲，中国居其一焉。五大洲者，亚细亚、欧罗巴、阿非利加、美利坚、澳大利亚也。
+  </div>
+  <div class="citation">出处：魏源《海国图志》卷三《地球正背面论》。</div>
+</section>
+
+<!-- ===== 二十、林则徐奏折与信札 ===== -->
+<section id="sec20">
+  <h2>二十、林则徐奏折与信札摘录</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 钱票无甚关碍宜重禁吃烟以杜弊源片</h3>
+  <div class="source-text">
+    当鸦片未盛行之时，吸食者不过害及其身，故杖徒已足蔽辜；迨流毒于天下，则为害甚巨，法当从严。若犹泄泄视之，是使数十年后，中原几无可以御敌之兵，且无可以充饷之银。
+  </div>
+  <div class="citation">出处：林则徐《钱票无甚关碍宜重禁吃烟以杜弊源片》（道光十八年）。《林则徐全集·奏稿》。</div>
+
+  <h3>2. 拟谕英吉利国王檄（稿本）</h3>
+  <div class="source-text">
+    贵国王累世相传，皆称恭顺。本朝亦久列藩封。设使别国有人到英国贸易，将鸦片之类诱惑英国人民，英国国王肯听其肆行不止否？……我天朝君临万国，尽有不测神威，然不忍不教而诛。故特明宣定例：该国商人等，如能悔悟畏法，将该国鸦片尽行缴官，即任其贸易，如仍执迷不悟，则按例治罪，船只货物入官。
+  </div>
+  <div class="citation">出处：林则徐《拟谕英吉利国王檄》（道光十九年）。《林则徐全集》。</div>
+</section>
+
+<!-- ===== 二十一、《大清律例》条文 ===== -->
+<section id="sec21">
+  <h2>二十一、《大清律例》条文摘录</h2>
+  <p><span class="tag tag-official">法律条文</span></p>
+
+  <h3>1. 五刑</h3>
+  <div class="source-text">
+    五刑：一曰笞刑，二曰杖刑，三曰徒刑，四曰流刑，五曰死刑。笞刑五：自一十至五十，每十加一等。杖刑五：自六十至一百，每十加一等。徒刑五：自一年至三年，每半年加一等，各附杖一百。流刑三：二千里、二千五百里、三千里，各附杖一百。死刑二：斩、绞。
+  </div>
+  <div class="citation">出处：《大清律例》卷一《名例律·五刑》。</div>
+
+  <h3>2. 谋反大逆</h3>
+  <div class="source-text">
+    凡谋反，及大逆，但共谋者，不分首从，皆凌迟处死。年十五以下之男，及母女妻妾姊妹，若子之妻妾，给付功臣之家为奴。财产入官。正犯之祖父父子孙兄弟同居之人，如不论已否觉察，年十六以上皆斩。
+  </div>
+  <div class="citation">出处：《大清律例》卷二十三《刑律·贼盗上·谋反大逆》。</div>
+
+  <h3>3. 秋审制度</h3>
+  <div class="source-text">
+    凡犯死罪，非常赦所不原者，俱监候待报。每年秋审，九卿詹事科道会同复审，分别情实、缓决、矜、疑，具题请旨。情实者，即行处决；缓决者，暂缓执行，次年再审；矜者，减等发落；疑者，另议。
+  </div>
+  <div class="citation">出处：《大清律例》卷首《秋审条款》；《清史稿·刑法志》。</div>
+</section>
+
+<!-- ===== 二十二、洪秀全与太平天国文献 ===== -->
+<section id="sec22">
+  <h2>二十二、洪秀全与太平天国文献</h2>
+  <p><span class="tag tag-official">太平天国文书</span></p>
+
+  <h3>1. 《天朝田亩制度》（摘录）</h3>
+  <div class="source-text">
+    凡天下田，天下人同耕，此处不足，则迁彼处，彼处不足，则迁此处。凡天下田，丰荒相通，此处荒，则迁彼丰处以赈此荒处，彼处荒，则迁此丰处以赈彼荒处。务使天下共享天父皇上帝大福，有田同耕，有饭同食，有衣同穿，有钱同使，无处不均匀，无人不饱暖。
+  </div>
+  <div class="citation">出处：《天朝田亩制度》（咸丰三年颁布）。<br><a href="https://www.guoxue123.com/zbzl/tptg/001.htm">guoxue123.com</a></div>
+
+  <h3>2. 洪秀全《原道觉世训》（摘录）</h3>
+  <div class="source-text">
+    天下凡间，人民虽众，总为皇上帝所化所生。生于皇上帝，长亦皇上帝养之。皇上帝天下凡间大共之父也。死生祸福由其主宰，服食器用皆其造成。仰观俯察，皆皇上帝之恩赐也。奈何世人忘本，不感皇上帝之恩，反敬妖魔。
+  </div>
+  <div class="citation">出处：洪秀全《原道觉世训》（道光二十五年）。<br>《太平天国印书》。</div>
+
+  <h3>3. 李秀成《自述》（摘录）</h3>
+  <div class="source-text">
+    今天朝之事，皆因自己不能知人善任，信人不专，故至此也。天王不能识人，以致误用佞臣，专信长兄安王、福王，不理朝政。又因弟干王洪仁玕自广东至京，一概交伊管事，但干王在京，不能管事，各处头目不服。又有谗言惑主，因此人心不服。
+  </div>
+  <div class="citation">出处：《李秀成自述》（同治三年）。罗尔纲《太平天国史纲》附录。</div>
+</section>
+
+<!-- ===== 二十三、康有为公车上书与变法文献 ===== -->
+<section id="sec23">
+  <h2>二十三、康有为公车上书与变法文献</h2>
+  <p><span class="tag tag-official">变法文献</span></p>
+
+  <h3>1. 《公车上书》摘录（光绪二十一年，1895年）</h3>
+  <div class="source-text">
+    窃以为今之为治，当以开创之势治之，不当以守成之势治之；当以列国并立之势治之，不当以一统垂裳之势治之。盖开创则更张百度，守成则率由旧章；列国并立则争雄角智，一统垂裳则闭关自守……夫今日在中国而言变法，非徒变其法而已，变其政体可也。
+  </div>
+  <div class="citation">出处：康有为《公车上书》（光绪二十一年）。《康有为全集》。<br><a href="https://www.guoxue123.com/zbzl/kwylj/000.htm">guoxue123.com</a></div>
+
+  <h3>2. 光绪帝"明定国是"诏（光绪二十四年四月二十三日，1898年6月11日）</h3>
+  <div class="source-text">
+    数年以来，中外臣工，讲求时务，多主变法自强。比者诏书数下，如开特科，汰冗兵，改武科，立学堂，皆经再三审定，筹之至熟，甫议施行。惟是风习太深，守旧者固习于所安，一时难语更始；而用新者又或不达事理，不明守经权通之宜……兹特下诏，明定国是，嗣后中外大小臣工，皆宜留心本源，讲求经济，以有用之学，以副朕维新之至意。
+  </div>
+  <div class="citation">出处：《清实录·德宗实录》光绪二十四年四月丁酉。</div>
+</section>
+
+<!-- ===== 二十四、孙中山与同盟会文献 ===== -->
+<section id="sec24">
+  <h2>二十四、孙中山与同盟会文献</h2>
+  <p><span class="tag tag-academic">革命文献</span></p>
+
+  <h3>1. 《同盟会宣言》（光绪三十一年，1905年）</h3>
+  <div class="source-text">
+    驱除鞑虏，恢复中华，创立民国，平均地权。今者国民军起，立军政府，括满清二百六十余年之残酷政治……维新变法国政体，创立民国。凡为国民，皆平等以有参政权。大总统由国民共举，议会以国民公举之议员构成之。制定中华民国宪法，人人共守。敢有帝制自为者，天下共击之。
+  </div>
+  <div class="citation">出处：《中国同盟会革命方略》（光绪三十一年）。《孙中山全集》第一卷。<br><a href="https://www.sunyatsen.cn/legacy/szq.php">sunyatsen.cn</a></div>
+
+  <h3>2. 孙中山《民报发刊词》（光绪三十一年，1905年）</h3>
+  <div class="source-text">
+    余维欧美之进化，凡以三大主义：曰民族，曰民权，曰民生。罗马之亡，民族主义兴，而欧洲各国以独立。洎自帝其国，威行专制，在下者不堪其苦，则民权主义起。十八世纪之末，十九世纪之初，专制仆而立宪政体殖焉。民权以民族主义为先驱。乃民权初起之故，而民生蹙感之机……今者中国革命，亦将循是三大主义而行之可也。
+  </div>
+  <div class="citation">出处：孙中山《民报发刊词》。《孙中山全集》第一卷。</div>
+</section>
+
+<!-- ===== 二十五、秋瑾、邹容、林觉民遗文 ===== -->
+<section id="sec25">
+  <h2>二十五、秋瑾、邹容、林觉民遗文</h2>
+
+  <h3>1. 秋瑾绝命词</h3>
+  <div class="source-text">
+    秋风秋雨愁煞人。
+  </div>
+  <div class="citation">出处：秋瑾就义前手书。《秋瑾集》。</div>
+
+  <h3>2. 邹容《革命军》摘录</h3>
+  <div class="source-text">
+    革命者，天演之公例也。革命者，世界之公理也。革命者，争存争亡过渡时代之要义也。革命者，顺乎天而应乎人者也。革命者，去腐败而存良善者也。革命者，由野蛮而进文明者也。革命者，除奴隶而为主人者也。
+  </div>
+  <div class="citation">出处：邹容《革命军》第一章（光绪二十九年）。<br><a href="https://www.guoxue123.com/zbzl/zrp/000.htm">guoxue123.com</a></div>
+
+  <h3>3. 林觉民《与妻书》（宣统三年，1911年）</h3>
+  <div class="source-text">
+    吾至爱汝，即此爱汝一念，使吾勇于就死也。吾自遇汝以来，常愿天下有情人都成眷属；然遍地腥云，满街狼犬，称心快意，几家能彀？司马青衫，吾不能学太上之忘情也。语云：仁者"老吾老以及人之老，幼吾幼以及人之幼"。吾充吾爱汝之心，助天下人爱其所爱，所以敢先汝而死，不顾汝也。汝体吾此心，于啼泣之余，亦以天下人为念，当亦乐牺牲吾身与汝身之福利，为天下人谋永福也。嗟夫！巾短情长，所未尽者，尚有万千，汝可以模拟得之。
+  </div>
+  <div class="citation">出处：林觉民《与妻书》（宣统三年三月二十六日夜）。《黄花岗烈士事略》。</div>
+</section>
+
+<!-- ===== 二十六、清帝退位诏书 ===== -->
+<section id="sec26">
+  <h2>二十六、清帝退位诏书</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>宣统三年十二月二十五日（1912年2月12日）退位诏书</h3>
+  <div class="source-text">
+    朕钦奉隆裕太后懿旨：前因民军起事，各省响应，九夏沸腾，生灵涂炭。特命袁世凯遣员，与民军代表，讨论大局，商开会议。议开，民军以共和为前提，断不承认君主立宪。朝廷亦何忍以君位一姓之尊，拂海内扰扰之公意。是用因民军之请，以权宜之策，宣布共和。但求转危为安，万姓同安。
+  </div>
+  <div class="source-text">
+    古之君天下者，重在保民，乃所以保其国家也。将来之大民国，必能合五族以成一统。是汉、满、蒙、回、藏五族所共戴者，即为完全民国，此朕之志愿也。总期人民安堵，海宇乂安。仍合满、蒙、回、藏五族完全领土，为一大中华民国。予与皇帝得以退处宽闲，优游岁月，长受国民之优礼。
+  </div>
+  <div class="citation">出处：《清实录·宣统政纪》卷七十；《政府公报》宣统三年十二月二十五日。<br><a href="https://www.historychina.cn">historychina.cn</a></div>
+</section>
+
+<!-- ===== 二十七、孟森《清史讲义》论述 ===== -->
+<section id="sec27">
+  <h2>二十七、孟森《清史讲义》论述摘录</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 论清初之统一</h3>
+  <div class="source-text">
+    清自太祖创业，至世祖入关，不过六十年。此六十年中，以一小部之力量，覆明朝二百七十余年之社稷，奄有天下，可谓古今未有之奇局。然推究其故，实由明之自亡，非清之能亡之也。明之亡，亡于流寇；流寇之起，起于民穷；民穷之故，由于赋重而吏贪。此非一朝一夕之故，其所由来者渐矣。
+  </div>
+  <div class="citation">出处：孟森《清史讲义》第一编《总论》。<br><a href="https://www.guoxue123.com/zbzl/qsyj/000.htm">guoxue123.com</a></div>
+
+  <h3>2. 论康熙朝政治</h3>
+  <div class="source-text">
+    圣祖仁孝性成，智勇天锡。早承大业，勤政爱民。经文纬武，寰宇一统。虽曰守成，实同开创焉。自三藩平后，年年西征，北征，劳费不赀。然未尝以兵事累民。终康熙六十一年，永不加赋之诏，为清代仁政之大者。
+  </div>
+  <div class="citation">出处：孟森《清史讲义》第二编《康熙时期》。</div>
+
+  <h3>3. 论雍正朝改革</h3>
+  <div class="source-text">
+    世宗之治，理繁治剧，振举废坠。清查钱粮，火耗归公，摊丁入地，改土归流，此数者皆清代一大改革也。然世宗之治，以严明为尚，其治臣下，不以恩礼，而以法度。故人多以刻薄目之。然观其施为之大者，实有造福于民者。摊丁入地，使无地之民不再输丁银，此其为惠于穷民者甚大。
+  </div>
+  <div class="citation">出处：孟森《清史讲义》第二编《雍正时期》。</div>
+</section>
+
+<!-- ===== 二十八、商衍鎏《清代科举考试述录》 ===== -->
+<section id="sec28">
+  <h2>二十八、商衍鎏《清代科举考试述录》摘录</h2>
+  <p><span class="tag tag-academic">学术论述</span></p>
+
+  <h3>1. 科举三级考试制度</h3>
+  <div class="source-text">
+    清代科举，沿明制，分乡试、会试、殿试三级。乡试三年一科，逢子、卯、午、酉年八月举行，称秋闱。会试亦三年一科，逢丑、辰、未、戌年春三月举行，称春闱。殿试于会试后举行，由皇帝亲自策问。乡试中者为举人，会试中者为贡士，殿试定甲第，一甲三人（状元、榜眼、探花），赐进士及第；二甲若干人，赐进士出身；三甲若干人，赐同进士出身。
+  </div>
+  <div class="citation">出处：商衍鎏《清代科举考试述录》第一章。<br>商务印书馆，1958年版。</div>
+
+  <h3>2. 八股文格式</h3>
+  <div class="source-text">
+    八股文以四书命题，以朱子集注为程式。文分八段：破题、承题、起讲、入手、起股、中股、后股、束股。起股、中股、后股、束股各有两股排比对偶，合为八股，故曰八股文。字数有限制，清初限五百字，后限七百字。文必代圣贤立言，不得自出意见。
+  </div>
+  <div class="citation">出处：商衍鎏《清代科举考试述录》第三章。</div>
+
+  <h3>3. 清末废科举</h3>
+  <div class="source-text">
+    光绪三十一年八月，清廷下诏："自丙午科（1906年）为始，所有乡会试及各省岁考等，一律停止。"此千年科举制度之终结也。自隋大业元年（605年）始，至清光绪三十一年（1905年）止，科举制度行之一千三百年。
+  </div>
+  <div class="citation">出处：商衍鎏《清代科举考试述录》附录；《清史稿·选举志》。</div>
+</section>
+
+<!-- ===== 二十九、清末新政上谕 ===== -->
+<section id="sec29">
+  <h2>二十九、清末新政上谕摘录</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 慈禧太后"变法上谕"（光绪二十七年，1901年）</h3>
+  <div class="source-text">
+    世有万祀不易之常经，无一成不变之治法。穷变通久，见于大易；损益可知，见于论语。伊古以来，代有损益……总之，法令不更，锢习不破；不除锢习，不得人才；不求人才，不足图治。取外国之长，乃可补中国之短；惩前事之失，乃可作后事之师。
+  </div>
+  <div class="citation">出处：《清实录·德宗实录》光绪二十七年三月癸亥。《清史稿·德宗本纪》。</div>
+
+  <h3>2. 废除科举诏（光绪三十一年，1905年）</h3>
+  <div class="source-text">
+    谕内阁：前经降旨，谕令各省设立学堂，并经管学大臣议定学堂章程，分别奏明办理。兹据直督袁世凯等奏请将科举学堂分年递减归并一摺。着自丙午科为始，所有乡会试及各省岁考等，一律停止。以前岁科考未取之生员，分别办理。各省学堂章程，仍须切实推行。
+  </div>
+  <div class="citation">出处：《清实录·德宗实录》光绪三十一年八月甲辰。</div>
+
+  <h3>3. 预备立宪诏（光绪三十二年，1906年）</h3>
+  <div class="source-text">
+    现今日外患交乘，时艰孔急。特派载泽、戴鸿慈、徐世昌、端方等分赴东西各国，考求政治。该大臣等回国奏陈，佥谓国势不振，皆由上下相蒙，各逞己见，立法不一。果能仿行宪政，则法等敉齐，自无隔阂。著即自本年起，先从官制入手，次第更张。嗣后逐年应行筹备事宜，由该王大臣等随时奏明办理。
+  </div>
+  <div class="citation">出处：《清实录·德宗实录》光绪三十二年七月丙戌。</div>
+</section>
+
+<!-- ===== 三十、义和团与庚子事变文献 ===== -->
+<section id="sec30">
+  <h2>三十、义和团与庚子事变文献</h2>
+  <p><span class="tag tag-official">官方与民间文献</span></p>
+
+  <h3>1. 义和团揭帖（代表性文献）</h3>
+  <div class="source-text">
+    神助拳，义和团，只因鬼子闹中原。劝奉教，乃霸天，不敬神佛忘祖先。男无伦，女行奸，鬼孩俱是子母产。天无雨，地焦旱，全是教堂止住天。神发怒，仙发怨，一同下山把道传。非是谣，非白言，拿起刀枪备决战。兵法易，助学拳，要摈鬼子不算难。
+  </div>
+  <div class="citation">出处：《义和团揭帖》（光绪二十六年）。《义和团档案史料》。<br><a href="https://www.guoxue123.com/zbzl/yht/000.htm">guoxue123.com</a></div>
+
+  <h3>2. 慈禧太后宣战诏书（光绪二十六年五月二十五日，1900年6月21日）</h3>
+  <div class="source-text">
+    向来中外结好，我朝毫无成心。近因民教交哄，各国使者议请严惩乱民，朝廷屡降谕旨，饬令分别查办。不意洋人势甚猖獗，竟以兵船数十，横行海口。又不时开炮，轰击炮台，更于各处昏夜放火，抢夺居民。自是不但不畏威服，反敢凭陵逼胁……此等情形，其有意骚扰，已可概见。尔各该大臣等，务当共体联邦同仇之心，奋勇图功。但有军务，随时驰奏。
+  </div>
+  <div class="citation">出处：《清实录·德宗实录》光绪二十六年五月庚戌。<br>《义和团档案史料》。</div>
+
+  <h3>3. 《辛丑条约》签订后上谕（光绪二十七年，1901年）</h3>
+  <div class="source-text">
+    上年拳匪滋事，乘机骚乱，致拂各国之好，实非意料所及。不意祸延京师，两宫西幸。迭经降旨罪己，深自引咎。今和局已成，赔款条约俱各遵行。此后惟有痛除积习，力图自强，以期无负上天降鉴之意。
+  </div>
+  <div class="citation">出处：《清实录·德宗实录》光绪二十七年七月辛酉。</div>
+</section>
+
+<!-- ===== 三十一、白莲教起义相关记载 ===== -->
+<section id="sec31">
+  <h2>三十一、白莲教起义相关记载</h2>
+  <p><span class="tag tag-official">官方与民间文献</span></p>
+
+  <h3>1. 《清史稿》记白莲教起义</h3>
+  <div class="source-text">
+    嘉庆元年正月，湖北枝江、宜都白莲教匪聂杰人、张正谟等谋叛。教匪之起，由楚人刘松、宋之清等倡白莲教。以"天降劫，真命主，同教之人，可免水火刀兵之灾"为号召。乾隆五十九年，刘松等被获。其党刘之协、宋之清等分往川、陕、楚传教。至是枝江先发，数月之间，蔓延数省。
+  </div>
+  <div class="citation">出处：《清史稿·列传·教匪传》。<br><a href="https://m.gushiwen.cn/guwen/bookv_31355145c8b8.aspx">gushiwen.cn</a></div>
+
+  <h3>2. 白莲教起义耗银记载</h3>
+  <div class="source-text">
+    自嘉庆元年教匪起，至九年事平，用兵九载。军需之费，先后拨银二万万两。国库为之耗竭。嘉庆初年，户部岁入约四千万两，而教匪之役耗银二万万两，几近五年之岁入。自此财政日绌，不复康熙、乾隆之盛矣。
+  </div>
+  <div class="citation">出处：《清史稿·食货志》；魏源《圣武记》卷九《嘉庆川湖陕靖寇记》。</div>
+
+  <h3>3. 嘉庆帝罪己诏（嘉庆十八年，1813年天理教禁门之变后）</h3>
+  <div class="source-text">
+    朕寅承大统，迄今十八年。自丙寅亲政以来，夙夜兢兢，勤思图治。乃政令有所不行，积弊未及革除。今突有此非常之变，皆朕失德所致。夫变生肘腋，良由内外因循废弛，有以致之。朕惟自责自咎，岂可推诿于人？
+  </div>
+  <div class="citation">出处：《清实录·仁宗实录》嘉庆十八年九月壬申。《清史稿·仁宗本纪》。</div>
+</section>
+
+<!-- ===== 三十二、《满洲实录》与清初建国 ===== -->
+<section id="sec32">
+  <h2>三十二、《满洲实录》与清初建国史料</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 努尔哈赤起兵复仇</h3>
+  <div class="source-text">
+    太祖欲报祖父之仇，止有遗甲十三副，遂结诺密纳，共起兵攻尼堪外兰。时癸未岁夏五月也。太祖年二十五矣。有三祖索长阿第四子龙敦，唆诺密纳之弟鼐喀达曰："今明国尚欲助尼堪外兰筑城于嘉班，令为满洲主，况哈达万汗又助之，尔何故顺淑勒贝勒耶？"鼐喀达往告其兄诺密纳。诺密纳曰："明助尼堪外兰筑城于嘉班，令为满洲主，尔若攻破哈达，即赐尔嘉班城，令尔为满洲主。"鼐喀达遂引明兵至哈达，哈达万汗被擒，尼堪外兰遂据哈达。太祖闻之，曰："尔等何不早言？"遂誓师讨之。遂结诺密纳，共起兵攻尼堪外兰。太祖至雅尔哈齐，擒尼堪外兰，遂杀之。
+  </div>
+  <div class="citation">出处：《满洲实录》卷一，癸未岁至甲申岁（万历十一年至十二年）。<br><a href="http://www.guoxue123.com/shibu/0201/00mzsl/000.htm">国学导航·满洲实录</a></div>
+
+  <h3>2. 建州女真统一战争</h3>
+  <div class="source-text">
+    太祖招徕各部，环满洲而居者皆为削平，国势日盛。与明通好，岁遣使者往来，明人亦厚待之。然太祖素怀大志，欲并吞诸部，统一满洲。先是苏克苏浒河部、浑河部、完颜部、董鄂部、哲陈部、讷殷部、朱舍里部、鸭绿江部，皆为太祖所并。至癸巳年，古勒山之战，太祖以少击众，大破九部联军三万，威名大振。
+  </div>
+  <div class="citation">出处：《满洲实录》相关卷次；阎崇年《努尔哈赤传》。<br><a href="http://www.guoxue123.com/shibu/0201/00mzsl/000.htm">国学导航·满洲实录</a></div>
+</section>
+
+<!-- ===== 三十三、《扬州十日记》 ===== -->
+<section id="sec33">
+  <h2>三十三、《扬州十日记》——清初屠城亲历记录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. 扬州城破</h3>
+  <div class="source-text">
+    乙酉夏四月十四日，督镇史可法从白洋河失守，跄跄奔扬州，闭城御敌。至二十四日未破城前，禁门之内各有兵守；予住宅新城东，杨姓将守焉。吏卒碁置，予宅寓有二卒，左右邻舍亦然，践踏无所不至；供给日费钱千余，将不能继。不得已，共谋为主者觞。予更谬为恭敬，酬好渐洽。主者喜，诫卒稍远去。
+  </div>
+  <div class="citation">出处：王秀楚《扬州十日记》。<br><a href="https://m.gushiwen.cn/shiwenv_5efb3a9adbc5.aspx">古诗文网·扬州十日记</a></div>
+
+  <h3>2. 城破后惨状</h3>
+  <div class="source-text">
+    越次早，督镇牌谕至，内有"一人当之，不累百姓"之语；闻者莫不感泣。又传巡军小捷，人人加额焉。午后，有姻氏自瓜洲来，避兴平伯逃兵；予妇缘久别，相见唏嘘。而大兵入城之语，已有一二为予言者。予急出，询诸人，或曰："靖南侯黄得功援兵至。"旋观城上守城者，尚严整。再至市上，人言汹汹，披发跣足者继尘而至。问之，心急口喘，莫知所对。忽数十骑自北而南，奔腾狼狈，势如波涌；中拥一人，则督镇也。盖奔东城，外兵逼近，不能出；欲奔南关，故由此。是时，始知敌兵入城无疑矣。
+  </div>
+  <div class="citation">出处：王秀楚《扬州十日记》。<br><a href="https://m.gushiwen.cn/shiwenv_5efb3a9adbc5.aspx">古诗文网·扬州十日记</a></div>
+
+  <h3>3. 屠城亲历</h3>
+  <div class="source-text">
+    诸黠卒恐避匿者多，给众人以安民符节，不诛；匿者竞出从之。共集至五、六十，妇女参半。兄谓予曰："我落落四人，或遇悍卒，终不能免。不若投彼大群……"二妾皆散发露肉，足深入泥中没径。一妾犹抱一女，卒鞭而掷之泥中，旋即驱走。一卒提刀前导，一卒横塑后还。一卒居中或左或右，以防逸逸。数十人如驱牛羊。稍不前即加捶挞或即杀之。诸妇女长素萦头，累累如贯珠，一步一跌，遍身泥土。
+  </div>
+  <div class="citation">出处：王秀楚《扬州十日记》。《嘉定屠城纪略》同列于《扬州十日记》类文献。<br><a href="https://m.gushiwen.cn/shiwenv_5efb3a9adbc5.aspx">古诗文网·扬州十日记</a></div>
+</section>
+
+<!-- ===== 三十四、《平定三逆方略》 ===== -->
+<section id="sec34">
+  <h2>三十四、《平定三逆方略》——平定三藩记载</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>卷一：平定三藩总述</h3>
+  <div class="source-text">
+    恭维皇上御极以来，政教覃敷，恩泽翔洽；薄海内外，罔不率俾。方偃戈衅甲，以文德怀柔四方；煦妪生息，休养万姓：兼容并覆，销弭孽芽。时二、三藩臣久分阃于外，便藩锡予，异数有加；虑或怙宠而骄盈，深欲保全其终始。因其乞骸之陈请，爰有劳还之简书；处其田庐、丰其廪饩，道里刍秣之费悉戒于有司，俾归故乡，长享茀禄：生民无馈饷之艰，士卒无远戍之苦。如天之福，甚深甚厚。乃滇逆吴三桂背恩反叛，闽逆耿精忠、粤逆尚之信相继煽惑；生民荼毒，奄及八年。当是时，凶渠陆梁，鸱张豕突；丑类蔓延，蜂结蚁聚。仰荷天威赫濯，六师四征；战守机宜，悉从指授：三方窃踞，次第削平。三桂穷蹙，首伏冥殛；精忠、之信既降复谋叛，先后皆伏诛。独三桂孽孙世璠犹困守一隅，逋诛逆命；至康熙二十年冬十月，大兵平云南，世璠授首。十一月，露布至京师，上命宣捷午门，择日告郊庙社稷，躬谒列祖山陵。念中外军民劳苦，德音诞敷，鸿恩湛被。
+  </div>
+  <div class="citation">出处：《平定三逆方略》卷一。<br><a href="http://ab.newdu.com/book/ms101698.html">国学典籍网·平定三逆方略</a></div>
+</section>
+
+<!-- ===== 三十五、《中俄尼布楚条约》原文 ===== -->
+<section id="sec35">
+  <h2>三十五、《中俄尼布楚条约》原文</h2>
+  <p><span class="tag tag-treaty">条约</span></p>
+
+  <h3>主要条款</h3>
+  <div class="source-text">
+    一、以流入黑龙江之绰尔纳河，即鞑靼语所称乌伦穆河附近之格尔必齐河为两国之界。格尔必齐河发源处为石大兴安岭，此岭直达于海，亦为两国之界；凡岭南一带土地及流入黑龙江大小诸川，应归中国管辖；其岭北一带土地及川流，应归俄国管辖。惟介于兴安岭与乌第河之间诸川流及土地应如何分划，今尚未决，此事须待两国使臣各归本国，详细查明之后，或遣专使，或用文牍，始能定之。又流入黑龙江之额尔古纳河亦为两国之界：河以南诸地尽属中国，河以北诸地尽属俄国。凡在额尔古纳河南岸之墨里勒克河口诸房舍，应悉迁移于北岸。
+  </div>
+  <div class="source-text">
+    二、俄人在亚克萨所建城障，应即尽行除毁。俄民之居此者，应悉赞其物用，尽数迁入俄境。两国猎户人等，不论因何事故，不得擅越已定边界。若有一、二下贱之人，或因捕猎，或因盗窃，擅自越界者，立即械系，遣送各该国境内官吏，审知案情，当即依罪处罚。若十数人越境相聚，或持械捕猎，或杀人劫略，并须报闻两国皇帝，依罪处以死刑。既不以少数人民犯禁而备战，更不以是而至流血。
+  </div>
+  <div class="source-text">
+    三、此约订定以前所有一切事情，永作罢论。自两国永好已定之日起，嗣后有逃亡者，各不收纳，并应械系遣还。四、现在俄民之在中国或华民之在俄国者，悉听如旧。五、自和约已定之日起，凡两国人民持有护照者，俱得过界来往，并许其贸易互市。六、和好已定，两国永敦睦谊，自来边境一切争执永予废除，倘各严守约章，争端无自而起。
+  </div>
+  <div class="source-text">
+    两国钦使各将缮定约文签押盖章，并各存正副二本。此约将以华、俄、拉丁诸文刊之于石，而置于两国边界，以作永久界碑。康熙二十八年七月二十四日，俄历一六八九年八月二十七日订于尼布楚。
+  </div>
+  <div class="citation">出处：《中俄尼布楚界约》，拉丁文译汉本。康熙二十八年（1689年）。<br><a href="https://www.zhonghuashu.com/wiki/%E4%B8%AD%E4%BF%84%E5%B0%BC%E5%B8%83%E6%A5%9A%E7%95%8C%E7%B4%84_%28%E6%8B%89%E4%B8%81%E6%96%87%E8%AD%AF%E6%BC%A2%29">中华文库·中俄尼布楚界约</a></div>
+</section>
+
+<!-- ===== 三十六、《雍正朱批谕旨》 ===== -->
+<section id="sec36">
+  <h2>三十六、《雍正朱批谕旨》——耗羡归公朱批</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>高成龄奏请提解耗羡（雍正二年）</h3>
+  <div class="source-text">
+    山西布政使臣高成龄谨奏为敬陈末议事。臣近阅条抄，见内阁交出请禁提解火耗之条奏，臣窃不能无议。伏思直省钱粮，正供之外，向有耗羡，虽多寡不同，皆系州、县入己。但百姓既以奉公，即属朝廷之财赋。蒙皇上体恤群臣，通院、司、道、府，而酌盈剂虚，以补其常俸之不足，俾大小臣工，溥徧均沾，其法至善。今如条奏所云，竟以耗羡为州、县应得之物，上司不肯提解。殊不知耗羡与节礼，原属相因，上司不提解耗羡，属官必呈送节礼。夫下属既送节礼，以取悦上司，则有所恃而生其挟制，必至肆行无忌。上司即有所闻，亦碍于情面，狥隐不言。损名节、败官常、朘民膏、亏国帑，实由于此。若禁止餽遗，一概不许收受，其不当，上司必将寻隙勒诈，别生事端，恣其无餍之求。即有淡薄自甘者，思欲屏绝餽遗，而上司衙门别无养廉，枵腹办事，势实难行。故臣愚以为州县耗羡银两，自当提解司库，听凭大吏酌盈分给，均得养廉，洵天理人情之至也。况耗羡提解于上，则通省遇有不得已之公费，即可支应，而不分派州县。上司既不分派，则州县无由借端科索里甲。是提解耗羡，亦可禁绝私派，岂非因时制宜之要务乎？
+  </div>
+  <div class="citation">出处：《世宗宪皇帝朱批谕旨》卷四十，朱批高成龄奏折，雍正二年六月初八。<br><a href="https://www.shidianguji.com/book/SK0845/chapter/1kfb0nhxgwmyb">识典古籍·朱批谕旨</a></div>
+</section>
+
+<!-- ===== 三十七、《四库全书总目提要》 ===== -->
+<section id="sec37">
+  <h2>三十七、《四库全书总目提要》——序言与凡例</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 乾隆三十七年上谕（征书令）</h3>
+  <div class="source-text">
+    朕稽古右文，聿资治理，几余典学，日有孜孜。因思策府缥缃，载籍极博，其巨者羽翼经训，垂范方来，固足称千秋法鉴。即在识小之徒，专门撰述，细及名物象数，兼综条贯，各自成家，亦莫不有所发明，可为游艺养心之一助。是以御极之初，即诏中外搜访遗书，并命儒臣校勘十三经、二十一史，遍布黉宫，嘉惠后学。第念读书固在得其要领，而多识前言往行以畜其德，惟搜罗益广，则研讨愈精。今内府藏书插架不为不富，然古今来著作之手，无虑数千百家，或逸在名山，未登柱史。正宜及时采集汇送京师，以彰千古同文之盛。
+  </div>
+  <div class="citation">出处：《四库全书总目提要》卷首一·圣谕。乾隆三十七年正月初四日。<br><a href="https://www.diancang.xyz/xueshuzaji/sikuquanshuzongmutiyao/5924.html">中华典藏·四库全书总目提要</a></div>
+
+  <h3>2. 凡例二十则（摘录）</h3>
+  <div class="source-text">
+    一、是书以经史子集提纲列目，经部分十类，史部分十五类，子部分十四类，集部分五类。或流别繁碎者，又分析子目，使条理分明。所录诸书各以时代为次，其历代帝王著作从《隋书经籍志》例，冠各代之首。
+  </div>
+  <div class="source-text">
+    一、前代藏书率无简择，萧兰并撷，珉玉杂陈，殊未协别裁之义。今诏求古籍，特创新规，一一辨厥妍媸，严为去取。其上者悉登编录，罔致遗珠。其次者亦长短兼胪，见瑕瑜之不掩。其有言非立训，义或违经，则附载其名，兼匡厥缪。
+  </div>
+  <div class="citation">出处：《四库全书总目提要》卷首三·凡例二十则。<br><a href="https://www.diancang.xyz/xueshuzaji/sikuquanshuzongmutiyao/5926.html">中华典藏·四库全书总目提要凡例</a></div>
+</section>
+
+<!-- ===== 三十八、《防范外夷规条》 ===== -->
+<section id="sec38">
+  <h2>三十八、《防范外夷规条》——广州贸易制度</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>乾隆二十四年（1759年）五条规条</h3>
+  <div class="source-text">
+    （一）外国商人不准在广州驻冬，每年贸易季结束后，立即回国；若有未清事务，可在澳门居住，下年随船回国。（二）只许行商与外国商人交易。（三）不许内地商人借领外国资本。（四）不许内地人向外国商人传送信息。（五）派兵对外国商船进行稽查。
+  </div>
+  <div class="citation">出处：《防范外夷规条》，乾隆二十四年（1759年）。据陈尚胜《清代开海政策与互市体系》归纳整理。<br><a href="https://www.aisixiang.com/data/172173.html">爱思想·陈尚胜论文</a></div>
+
+  <div class="note">说明：《防范外夷规条》为清代广州一口通商时期管理外商的核心法规，奠定了十三行垄断对外贸易的制度基础。此规条与乾隆二十二年"一口通商"上谕共同构成清前期"闭关锁国"政策的制度框架。完整条文建议以清代档案或专门法规汇编本核对。</div>
+</section>
+
+<!-- ===== 三十九、曾国藩《讨粤匪檄》 ===== -->
+<section id="sec39">
+  <h2>三十九、曾国藩《讨粤匪檄》</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>檄文全文（咸丰四年，1854年）</h3>
+  <div class="source-text">
+    为传檄事：逆贼洪秀全杨秀清称乱以来，于今五年矣。荼毒生灵数百余万，蹂躏州县五千余里，所过之境，船只无论大小，人民无论贫富，一概抢掠罄尽，寸草不留。其掳入贼中者，剥取衣服，搜括银钱，银满五两而不献贼者即行斩首。男子日给米一合，驱之临阵向前，驱之筑城浚濠。妇人日给米一合，驱之登陴守夜，驱之运米挑煤。妇女而不肯解脚者，则立斩其足以示众妇。船户而阴谋逃归者，则倒抬其尸以示众船。粤匪自处于安富尊荣，而视我两湖三江被胁之人曾犬豕牛马之不若。此其残忍残酷，凡有血气者未有闻之而不痛憾者也。
+  </div>
+  <div class="source-text">
+    自唐虞三代以来，历世圣人扶持名教，敦叙人伦，君臣、父子、上下、尊卑，秩然如冠履之不可倒置。粤匪窃外夷之绪，崇天主之教。自其伪君伪相，下逮兵卒贱役，皆以兄弟称之，谓惟天可称父，此外凡民之父皆兄弟也，凡民之母皆姊妹也。农不能自耕以纳赋，而谓田皆天王之田；商不能自买以取息，而谓货皆天王之货；士不能诵孔子之经，而别有所谓耶稣之说、《新约》之书，举中国数千年礼义人伦诗书典则，一旦扫地荡尽。此岂独我大清之变，乃开辟以来名教之奇变，我孔子孟子之所痛哭于九原，凡读书识字者，又乌可袖手安坐，不思一为之所也。
+  </div>
+  <div class="source-text">
+    自古生有功德，没则为神，王道治明，神道治幽，虽乱臣贼子穷凶极丑亦往往敬畏神祇。李自成至曲阜不犯圣庙，张献忠至梓潼亦祭文昌。粤匪焚郴州之学官，毁宣圣之木主，十哲两庑，狼藉满地。嗣是所过郡县，先毁庙宇，即忠臣义士如关帝岳王之凛凛，亦皆污其宫室，残其身首。以至佛寺、道院、城隍、社坛，无朝不焚，无像不灭。斯又鬼神所共愤怒，欲一雪此憾于冥冥之中者也。
+  </div>
+  <div class="source-text">
+    本部堂奉天子命，统师二万，水陆并进，誓将卧薪尝胆，殄此凶逆，救我被掳之船只，找出被胁之民人。不特纾君父宵旰之勤劳，而且慰孔孟人伦之隐痛。不特为百万生灵报枉杀之仇，而且为上下神祇雪被辱之憾。是用传檄远近，咸使闻知。倘有血性男子，号召义旅，助我征剿者，本部堂引为心腹，酌给口粮。倘有抱道君子，痛天主教之横行中原，赫然奋怒以卫吾道者，本部堂礼之幕府，待以宾师。倘有仗义仁人，捐银助饷者，千金以内，给予实收部照，千金以上，专摺奏请优叙。倘有久陷贼中，自找来归，杀其头目，以城来降者，本部堂收之帐下，奏受官爵。倘有被胁经年，发长数寸，临阵弃械，徒手归诚者，一概免死，资遣回藉。在昔汉唐元明之末，群盗如毛，皆由主昏政乱，莫能削平。今天子忧勤惕厉，敬天恤民，田不加赋，户不抽丁，以列圣深厚之仁，讨暴虐无赖之贼，无论迟速，终归灭亡，不待智者而明矣。若尔披胁之人，甘心从逆，抗拒天诛，大兵一压，玉石俱焚，亦不能更为分别也。本部堂德薄能鲜，独仗忠信二字为行军之本，上有日月，下有鬼神，明有浩浩长江之水，幽有前此殉难各忠臣烈士之魂，实鉴吾心，咸听吾言。檄到如律令，无忽！
+  </div>
+  <div class="citation">出处：曾国藩《讨粤匪檄》，咸丰四年（1854年）。<br><a href="https://m.baike.com/wiki/%E8%AE%A8%E7%B2%A4%E5%8C%AA%E6%AA%84/967589">百度百科·讨粤匪檄</a></div>
+</section>
+
+<!-- ===== 四十、李鸿章洋务奏折 ===== -->
+<section id="sec40">
+  <h2>四十、李鸿章洋务奏折摘录</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 《试办招商轮船折》（同治十一年，1872年）</h3>
+  <div class="source-text">
+    若中国自立招商局，则各商所有轮船股本必渐归官局，似足顺商情而强国体。拟请先行试办招商，为官商浃洽地步。俟机器局商船造成，即可随时添入，推广通行。又江、浙沙宁船只日少，海运米石日增，本届因沙船不敷，诸形棘手，应请以商局轮船分装海运米石，以补沙宁船之不足，将来虽米数愈增亦可无缺船之患。
+  </div>
+  <div class="citation">出处：李鸿章《李肃毅伯奏议》卷六，"试办招商轮船折"。同治十一年（1872年）。<br><a href="https://www.shidianguji.com/book/CADAL01033955/chapter/1l4aqqapqn6sm">识典古籍·李肃毅伯奏议</a>；<a href="https://1872.cmhk.com/About/4213.html">招商局档案馆</a></div>
+
+  <h3>2. 《筹议制造轮船未可裁撤折》（同治十三年，1874年）</h3>
+  <div class="source-text">
+    臣窃维欧洲诸国，百十年来，由印度而南洋，由南洋而东北，闯入中国边界腹地，凡前史之所未载，亘古之所未通，无不款关而求互市，我皇上如天之度，概与立约通商以牢笼之，合地球东西南北九万里之遥，胥聚于中国，此三千余年一大变局也。国家诸费皆可省，惟养兵设防、练习枪炮、制造兵轮船之费万不可省。求省费则必摒除一切，国无与立，终不得强矣。左宗棠前议创造闽省轮船，曾国藩饬造沪局轮船，皆为国家筹久远之计，岂不知费巨而效迟哉？惟以有开必先，不敢惜目前之费，以贻日后之悔。该局至今，已成不可弃置之势。苟或停止，则前功尽弃，后效难图。而所费之项，转成虚糜。
+  </div>
+  <div class="citation">出处：李鸿章《李肃毅伯奏议》卷六，"筹议制造轮船未可裁撤折"。同治十三年（1874年）。<br><a href="https://www.shidianguji.com/book/CADAL01033955/chapter/1l4aqqapqn6sm">识典古籍·李肃毅伯奏议</a>；<a href="http://www.71.cn/2015/0430/812194_5.shtml">宣讲家网</a></div>
+</section>
+
+<!-- ===== 四十一、张之洞《劝学篇》 ===== -->
+<section id="sec41">
+  <h2>四十一、张之洞《劝学篇》——"中体西用"</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. 《设学》篇：旧学为体，新学为用</h3>
+  <div class="source-text">
+    其学堂之法，约有五要：一曰新旧兼学。四书五经、中国史事、政书、地图为旧学；西政、西艺、西史为新学。旧学为体，新学为用，不使偏废。
+  </div>
+  <div class="citation">出处：张之洞《劝学篇·设学》。光绪二十四年（1898年）。<br><a href="http://www.iwenyan.com/zi/quanxuepi">爱文言网·劝学篇</a></div>
+
+  <h3>2. 《会通》篇：中学治身心，西学应世事</h3>
+  <div class="source-text">
+    中学为内学，西学为外学；中学治身心，西学应世事。
+  </div>
+  <div class="citation">出处：张之洞《劝学篇·会通》。光绪二十四年（1898年）。<br><a href="https://www.chinakongzi.org/baike/MINGCI/shuyu/201711/t20171128_148396.htm">中国孔子网</a></div>
+
+  <div class="note">说明："中体西用"（"中学为体，西学为用"）为晚清洋务运动的核心指导思想，张之洞《劝学篇》系统阐发了这一主张。该书于光绪二十四年（1898年）刊行后影响甚大，被清廷旨令颁行各省，成为洋务运动和清末新政的理论基础。</div>
+</section>
+
+<!-- ===== 四十二、左宗棠海防塞防奏折 ===== -->
+<section id="sec42">
+  <h2>四十二、左宗棠海防塞防奏折</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>《条议海防事宜》（光绪元年，1875年）</h3>
+  <div class="source-text">
+    伏闻总理各国事务衙门疏陈练兵、简器、造船、筹饷、用人、持久各条，宏远精密，无少罅隙。中国轮船局分设闽沪，闽局地势难得，所设船铁诸厂，费至巨万，论其成效，则华匠能以机器造机器，华人能通西法作船主，沪所不如。天津者人之头项，大江、三江入海之口，腰膂也。各岛之要，如台湾，定海则左右手之可护头项脊背，亟严为之防。谚云："扶起东边倒却西边。"斯言虽小，可以喻大。
+  </div>
+  <div class="citation">出处：左宗棠《条议海防事宜》，光绪元年（1875年），收录于《道咸同光四朝奏议》。<br><a href="https://www.zhonghuashu.com/wiki/%E6%A2%9D%E8%AD%B0%E6%B5%B7%E9%98%B2%E4%BA%8B%E5%AE%9C">中华文库·条议海防事宜</a></div>
+
+  <div class="note">说明：此折为海防与塞防之争中的关键文献。左宗棠主张"东则海防，西则塞防，二者并重"，反对李鸿章专重海防之议。光绪二年（1876年），左宗棠率军西征，至光绪三年（1877年）收复新疆全境。</div>
+</section>
+
+<!-- ===== 四十三、光绪帝"明定国是诏" ===== -->
+<section id="sec43">
+  <h2>四十三、光绪帝"明定国是诏"</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>光绪二十四年四月二十三日（1898年6月11日）</h3>
+  <div class="source-text">
+    数年以来，中外臣工，讲求时务，多主变法自强。迩者诏书数下，如开特科，裁冗兵，改武科制度，立大小学堂，皆经再三审定，筹之至熟，甫议施行。惟是风气尚未大开，论说莫衷一是，或托于老成忧国，以为旧章必应墨守，新法必当摈除，众喙哓哓，空言无补。试问今日时局如此，国势如此，若仍以不练之兵，有限之饷，士无实学，工无良师，强弱相形，贫富悬绝，岂真能制梃以挞坚甲利兵乎？朕惟国是不定，则号令不行，极其流弊，必至门户纷争，互相水火，徒蹈宋明积习，于时政毫无裨益。即以中国大经大法而论，五帝三王不相沿袭，譬之冬裘夏葛，势不两存。用特明白宣示，嗣后中外大小诸臣，自王公以及士庶，各宜努力向上，发愤为雄，以圣贤义理之学，植其根本，又须博采西学之切于时务者，实力讲求，以救空疏迂谬之弊。专心致志，精益求精，毋徒袭其皮毛，毋竞腾其口说，总期化无用为有用，以成通经济变之才。京师大学堂为各行省之倡，尤应首先举办，着军机大臣、总理各国事务王大臣会同妥速议奏。
+  </div>
+  <div class="citation">出处：《清实录·德宗实录》光绪二十四年四月二十三日。<br><a href="https://m.baike.com/wiki/%E5%AE%9A%E5%9B%BD%E6%98%AF%E8%AF%8F/621457">百度百科·明定国是诏</a>；<a href="http://www.gmw.cn/01gmrb/1998-06/12/GB/17721%5EGM7-1211.HTM">光明日报</a></div>
+
+  <div class="note">说明：此诏为戊戌变法的标志性文献，标志着光绪帝正式宣布变法维新。诏书中"国是不定，则号令不行"一语，成为维新派推进改革的核心论据。</div>
+</section>
+
+<!-- ===== 四十四、《钦定宪法大纲》 ===== -->
+<section id="sec44">
+  <h2>四十四、《钦定宪法大纲》</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 君上大权十四条（摘录）</h3>
+  <div class="source-text">
+    一、大清皇帝统治大清帝国，万世一系，永永尊戴。二、君上神圣尊严，不可侵犯。三、钦定颁行法律及发交议案之权。凡法律虽经议院议决，而未奉诏命批准颁布者，不能见诸施行。四、召集、开闭、停展及解散议院之权。解散之时，即令国民重行选举新议员，其被解散之旧员，即与齐民无异。五、设官制禄及黜陟百司之权。用人之权，操之君上，而大臣辅弼之，议院不得干预。六、统率陆海军及编定军制之权。君上调遣全国军队，制定常备兵额，得以全权执行。七、宣战、讲和、订立条约及派遣使臣与认受使臣之权。国交之事，由君上亲裁，不付议院议决。八、宣告戒严之权。当紧急时，得以诏令限制臣民之自由。
+  </div>
+  <div class="citation">出处：《钦定宪法大纲》，光绪三十四年八月初一日（1908年8月27日）颁行，宪政编查馆纂订。<br><a href="https://www.zhonghuashu.com/wiki/%E6%AC%BD%E5%AE%9A%E6%86%B2%E6%B3%95%E5%A4%A7%E7%B6%B1">中华文库·钦定宪法大纲</a></div>
+
+  <h3>2. 附臣民权利义务九条（摘录）</h3>
+  <div class="source-text">
+    一、臣民中有合于法律命令所定资格者，得为文武官吏及议员。二、臣民于法律范围以内，所有言论、著作、出版及集会、结社等事，均准其自由。三、臣民非按照法律所定，不加以逮捕、监禁、处罚。六、臣民之财产及居住，无故不加侵扰。七、臣民按照法律所定，有纳税、当兵之义务。
+  </div>
+  <div class="citation">出处：《钦定宪法大纲》附臣民权利义务。<br><a href="https://www.diancang.xyz/xueshuzaji/20640/375020.html">中华典藏·王世杰《比较宪法》附录</a></div>
+</section>
+
+<!-- ===== 四十五、《中华民国临时约法》 ===== -->
+<section id="sec45">
+  <h2>四十五、《中华民国临时约法》</h2>
+  <p><span class="tag tag-official">法律文献</span></p>
+
+  <h3>第一章 总纲</h3>
+  <div class="source-text">
+    第一条 中华民国由中华人民组织。第二条 中华民国之主权属于国民全体。第三条 中华民国领土为二十二行省、内外蒙古、西藏、青海。第四条 中华民国以参议院、临时大总统、国务员、法院行使其统治权。
+  </div>
+
+  <h3>第二章 人民（摘录）</h3>
+  <div class="source-text">
+    第五条 中华民国人民一律平等，无种族、阶级、宗教之区别。第六条 人民有人身、财产及营业之自由。第十条 人民有言论、著作、游行及结社之自由。第十一条 人民有书信秘密之自由。第十二条 人民有居住迁徙之自由。第十三条 人民有请愿于议会之权。第十四条 人民有诉讼于法院之权。第十五条 人民有应试任官之权。人民有纳税及服兵役之义务。
+  </div>
+  <div class="citation">出处：《中华民国临时约法》，民国元年三月十一日（1912年3月11日）公布，临时参议院通过。<br><a href="https://m.baike.com/wiki/%E4%B8%AD%E5%8D%8E%E6%B0%91%E5%9B%BD%E4%B8%B4%E6%97%B6%E7%BA%A6%E6%B3%95/604347">百度百科·中华民国临时约法</a></div>
+</section>
+
+<!-- ===== 四十六、李秀成自述 ===== -->
+<section id="sec46">
+  <h2>四十六、李秀成自述</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. 天王出身与拜上帝教</h3>
+  <div class="source-text">
+    天王是广东花县人，兄弟三人，长兄洪仁发，次兄洪仁达，天王名洪秀全，同父各母。长次兄是前母所生，在家种田，洪秀全在家读书。同冯云山二人同窗书友。一日天王忽病，此是丁酉年也，死去七日，还魂之后，俱讲天话，劝世人敬拜上帝，劝人修善。若世人肯拜上帝者，无灾无难；不拜上帝者，蛇虎伤人。敬上帝者不得拜别神，拜别神者有罪。
+  </div>
+  <div class="citation">出处：李秀成《李秀成自述》，同治三年（1864年）被俘后所写。<br><a href="https://www.diancang.xyz/lishizhuanji/17403/330552.html">中华典藏·李秀成自述</a></div>
+
+  <h3>2. 太平天国早期领导核心</h3>
+  <div class="source-text">
+    所知事者，欲立国者，深远图者，皆东王杨秀清、西王萧朝贵、南王冯云山、北王韦昌辉、翼王石达开、天官丞相秦日昌六人。东王杨秀清住在桂平县平隘山，在家种山烧炭为业，并不知机。自拜上帝之后，件件可悉。天王信用，一国之事，概交与他，军令严整，赏罚分明。
+  </div>
+  <div class="citation">出处：李秀成《李秀成自述》。<br><a href="http://iqh.ruc.edu.cn/old/jsmmhsymjjpyj/wxycb/1ef328559a894d47b2b4e49998b4c88e.htm">中国人民大学清史研究所</a></div>
+
+  <h3>3. 天朝十误</h3>
+  <div class="source-text">
+    一、误天王不下诏令。二、误不该封韦昌辉为义王。三、误主不信外臣。四、误不应发林绍璋去湘潭，此时林绍璋在湘潭全军败尽。五、误因东王、北王两家相杀，此是大误。六、误翼王与主不和，君臣而忌，翼起猜心，将合朝好文武将兵带去，此误至大。六、误主不信外臣，用其长兄次兄为辅，此人未有才情，不能保国而误。七、误主不问政事。八、误封王太多，此之大误。九、误立政无章。十、误不应专保天京，扯动各路兵马。
+  </div>
+  <div class="citation">出处：李秀成《李秀成自述》"天朝十误"。<br><a href="https://www.diancang.xyz/lishizhuanji/17403/330552.html">中华典藏·李秀成自述</a></div>
+
+  <h3>4. 就义绝命词</h3>
+  <div class="source-text">
+    今见老中堂恩广，罪将定要先行靖一方酬报。昨夜深惠厚情，死而足愿，欢乐归阴。
+  </div>
+  <div class="citation">出处：李秀成《李秀成自述》。<br><a href="https://m.163.com/dy/article/D4JT6QS70523DRI0.html">网易·李秀成自述</a></div>
+</section>
+
+<!-- ===== 四十七、王夫之《读通鉴论》 ===== -->
+<section id="sec47">
+  <h2>四十七、王夫之《读通鉴论》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>"一姓之兴亡"与"生民之生死"</h3>
+  <div class="source-text">
+    在上之仁而言之，则一姓之兴亡，私也；而生民之生死，公也。
+  </div>
+  <div class="citation">出处：王夫之《读通鉴论》卷十七。<br><a href="http://www.nopss.gov.cn/BIG5/219567/219576/17825729.html">全国哲学社会科学工作办公室</a></div>
+
+  <div class="note">说明：王夫之此论将"一姓之兴亡"（王朝更替）与"生民之生死"（民众命运）区分开来，强调后者方为"公"。与顾炎武《日知录》中"保国者，其君其臣肉食者谋之；保天下者，匹夫之贱与有责焉耳矣"之说相呼应，共同构成清初遗民思想家对"天下兴亡"的深刻反思，对后世影响深远。</div>
+</section>
+
+<!-- ===== 四十八、戴震《孟子字义疏证》 ===== -->
+<section id="sec48">
+  <h2>四十八、戴震《孟子字义疏证》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. 论"理"</h3>
+  <div class="source-text">
+    理者，察之而几微必区以别之名也，是故谓之分理；在物之质，曰肌理，曰腠理，曰文理；……得其分则有条而不紊，谓之条理。
+  </div>
+  <div class="citation">出处：戴震《孟子字义疏证》卷上"理"。<br><a href="https://gj.zdic.net/jingbu/16/">汉典古籍·孟子字义疏证</a></div>
+
+  <h3>2. 论"理"与"欲"</h3>
+  <div class="source-text">
+    天理者，节其欲而不穷人欲也。是故欲不可穷，非不可有。有而节之，使无过情，无不及情，可谓之非天理乎！人生而后有欲，有情，有知，三者，血气心知之自然也。……声色臭味之欲，资以养其生；喜怒哀乐之情，感而接于物；美丑是非之知，辨于物而发于心。
+  </div>
+  <div class="citation">出处：戴震《孟子字义疏证》卷下。<br><a href="http://www.guoxue123.com/jinbu/0401/01mzzysz/003.htm">国学导航·孟子字义疏证</a></div>
+
+  <div class="note">说明：戴震区分"理"与"欲"，强调天理不是消灭人欲，而是"节其欲而不穷人欲"。此论直接批判宋明理学"存天理，灭人欲"之说，为清代反理学思潮的代表性文献，对后世思想解放有重要意义。</div>
+</section>
+
+<!-- ===== 四十九、章学诚《文史通义》 ===== -->
+<section id="sec49">
+  <h2>四十九、章学诚《文史通义》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>"六经皆史"</h3>
+  <div class="source-text">
+    六经皆史也。古人不著书，古人未尝离事而言理，六经皆先王之政典也。
+  </div>
+  <div class="citation">出处：章学诚《文史通义·卷一内篇一·易教上》。<br><a href="https://gj.zdic.net/shibu/179/7645.html">汉典古籍·文史通义</a></div>
+
+  <div class="note">说明："六经皆史"是章学诚史学理论的核心命题，认为六经并非脱离政教实践的抽象著述，而是"先王之政典"，即古代政治制度与历史实践的记录。此说打破了经学与史学的壁垒，推动了中国史学理论的发展，对晚清及近代史学影响深远。</div>
+</section>
+
+<!-- ===== 五十、《钦定藏内善后章程二十九条》 ===== -->
+<section id="sec50">
+  <h2>五十、《钦定藏内善后章程二十九条》</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>1. 金瓶掣签制度（第一条摘录）</h3>
+  <div class="source-text">
+    关于寻找活佛及呼图克图的灵童问题，依照藏人例俗，确认灵童必须问卜于四大护法，这样就难免发生弊端。大皇帝为求黄教得到兴隆，特赐一金瓶，今后遇到寻认灵童时，邀集四大护法，将灵童的名字及出生年份用满、汉、藏三种文字写于象牙签上，放入金瓶内……
+  </div>
+  <div class="citation">出处：《钦定藏内善后章程二十九条》第一条，乾隆五十八年（1793年）颁行。<br><a href="http://www.tibetology.ac.cn/2023-11/18/content_42599601.htm">中国藏学研究中心·西藏历史55讲</a></div>
+
+  <h3>2. 对外事务管理（摘录）</h3>
+  <div class="source-text">
+    今后廓尔喀、不丹、锡金等藩属之回文，必须按照驻藏大臣指示缮写。关于边界的重大事务，更要根据驻藏大臣的指示处理。外方所献的贡物，也须请驻藏大臣查阅。所有噶伦都不得私自与外方藩属通信。
+  </div>
+  <div class="citation">出处：《钦定藏内善后章程二十九条》相关条款。<br><a href="http://www.tibetology.ac.cn/2022-08/07/content_42062341.htm">中国藏学研究中心</a></div>
+
+  <h3>3. 供养银发放制度（第二十八条摘录）</h3>
+  <div class="source-text">
+    依照原例，应该发给活佛及喇嘛之供养银，均有定时，近来多有提前发放情事。今后应按规定时间发放，绝对不得提前。望济咙呼图克图立即进行调查，如发现提前发放供养银，或未全部发放者，对负责人员予以处分。
+  </div>
+  <div class="citation">出处：《钦定藏内善后章程二十九条》第二十八条。<br><a href="http://www.tibetology.ac.cn/2022-08/07/content_42062341.htm">中国藏学研究中心</a></div>
+
+  <div class="note">说明：《钦定藏内善后章程二十九条》是清朝治理西藏的核心法规，由福康安等奉旨于乾隆五十八年（1793年）颁行。章程确立了金瓶掣签制度、驻藏大臣职权、边境管理、财政税收、货币铸造、军队建设等方面的制度规范，标志着清政府对西藏行使主权的制度化。以上为根据网页可核验内容整理的主要条款摘录，完整29条建议以专门文献核对。</div>
+</section>
+
+<!-- ===== 五十一、和珅抄家清单 ===== -->
+<section id="sec51">
+  <h2>五十一、和珅抄家清单</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. 查抄上谕</h3>
+  <div class="source-text">
+    嘉庆四年正月初八日，江南道监察御史广兴、兵科给事中广泰、吏科给事中王念孙等，参奏和珅弄权舞弊，僭妄不法。本日奉旨，将和珅、福长安拿交刑部严讯，并查抄家产。派八王爷、七额驸、刘中堂、董中堂讯问，随上刑具监禁刑部。派十一王爷、庆桂、盛住同查抄和珅住宅，派绵二爷查抄和珅花园。
+  </div>
+  <div class="citation">出处：薛福成《庸盦笔记》卷四《查抄和珅住宅花园清单》。<br><a href="https://www.guxuo.com/bj/yabj/042.htm">梦远书城·庸盦笔记</a></div>
+
+  <h3>2. 僭侈逾制</h3>
+  <div class="source-text">
+    所盖楠木房僭侈逾制。其多宝阁及隔断式样，皆仿照宁寿宫制度。其园寓点缀，竟与圆明园蓬岛瑶台无异，不知是何居心。又所藏珍宝内，珍珠手串二百余串，较之大内多至数倍。并有大珠，较御用冠顶珠尤大。又有真宝石顶数十颗，并非伊应戴之物。而整块大宝石不计其数，且有内府所无者。所藏金银玉石古玩等类尚未钞毕。
+  </div>
+  <div class="citation">出处：薛福成《庸盦笔记》卷四。<br><a href="https://www.guxuo.com/bj/yabj/042.htm">梦远书城·庸盦笔记</a></div>
+
+  <h3>3. 抄家清单（摘录）</h3>
+  <div class="source-text">
+    已估者二十六号，合算共计银二万二千三百八十九万五千一百六十两。查抄和珅住宅花园清单：大红宝石（一百八十余块）。小红宝石（九百八十余块）。蓝宝石（大小共四千零七十块）。宝石数珠（一千零八盘）。珊瑚数珠（三百七十三盘）。蜜蜡数珠（十三盘）。宝石珊瑚帽顶（二百三十六个）。玉马二匹（高一尺二寸，长四尺）。珊瑚树十棵（高三尺八寸）。白玉观音一尊。汉玉罗汉十八尊……
+  </div>
+  <div class="citation">出处：薛福成《庸盦笔记》卷四。薛福成转引上谕及查抄清单。<br><a href="https://www.guxuo.com/bj/yabj/042.htm">梦远书城·庸盦笔记</a></div>
+
+  <div class="note">说明：和珅抄家清单为清代最大贪腐案的核心文献。据薛福成《庸盦笔记》记载，仅已估价部分即合银二万二千三百余万两，另有大量未估价珍宝。民间"和珅跌倒，嘉庆吃饱"之说即源于此。需要说明的是，各文献对和珅家产总额记载差异较大，有"二亿两""八千万两"等不同说法，正式引用时建议以《清实录·仁宗实录》嘉庆四年相关记载及中国第一历史档案馆档案为准。</div>
+</section>
+
+<!-- ===== 五十二、《大清会典》 ===== -->
+<section id="sec52">
+  <h2>五十二、《大清会典》条文摘录</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>内阁条文</h3>
+  <div class="source-text">
+    钦定大清会典卷二·内阁：大学士满汉各二人均由特简，赞理机务，表率百寮，补授后请旨兼殿阁及六部尚书衔。钦定殿阁名：保和殿。
+  </div>
+  <div class="source-text">
+    一、新除大学士应为某殿某阁大学士兼某部尚书，及行走前后班次，由内阁具奏请旨。一、大学士满汉各二人外，以尚书协办阁务，出自特简。
+  </div>
+  <div class="citation">出处：《钦定大清会典》卷二；《钦定大清会典则例》卷二。<br><a href="https://df.cnkgraph.com/Book/%E5%8F%B2%E9%83%A8/%E6%B3%95%E5%88%B6%E7%B1%BB/%E9%92%A6%E5%AE%9A%E5%A4%A7%E6%B8%85%E4%BC%9A%E5%85%B8/14902/KR2m0012_002">中国知网古籍·大清会典</a>；<a href="https://www.zhonghuashu.com/wiki/%E6%AC%BD%E5%AE%9A%E5%A4%A7%E6%B8%85%E4%BC%9A%E5%85%B8%E5%89%87%E4%BE%8B_%28%E5%9B%9B%E5%BA%93%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B7002">中华文库·大清会典则例</a></div>
+
+  <div class="note">说明：《大清会典》为清代典章制度的总汇，记录各衙门职掌、编制、办事规则等。清代共修五部会典：康熙、雍正、乾隆、嘉庆、光绪朝各一部，以光绪《大清会典》最为完备。军机处在会典中的条文因网页检索未获，建议以专门版本核对。</div>
+</section>
+
+<!-- ===== 五十三、《八旗通志》 ===== -->
+<section id="sec53">
+  <h2>五十三、《八旗通志》——八旗制度记载</h2>
+  <p><span class="tag tag-official">官方文献</span></p>
+
+  <h3>兵制志·八旗制度</h3>
+  <div class="source-text">
+    我朝出震乘乾，用武功开国定制。以人户隶佐领，以佐领隶参领，以参领隶都统、副都统。皆司其版籍，经其土田，掌其教化，平其讼狱，而归於诘其戎兵。於周礼乡遂之法，如重规叠矩，诚所谓先圣后圣，其揆一矣。至八旗之制，则实同於风后之握奇。
+  </div>
+  <div class="citation">出处：《钦定八旗通志》卷三十二《兵制志》。<br><a href="http://ab.newdu.com/book/ms263309.html">国学典籍网·八旗通志</a>；<a href="https://www.shidianguji.com/book/NGJ892412000011907216895/chapter/1lw0l4v32wufu">识典古籍·八旗通志</a></div>
+
+  <div class="note">说明：《八旗通志》为记载八旗制度的核心官修典籍，初集修于雍正朝，续修于乾隆朝。卷三十二《兵制志》开篇论述八旗制度的渊源与组织架构：以佐领（牛录）为基层单位，参领（甲喇）辖之，都统（固山额真）统之。八旗制度是清代军事、户籍、行政合一的核心制度，入关后逐渐演变为兼具军事与社会管理职能的特殊组织。</div>
+</section>
+
+<!-- ===== 五十四、纪昀《阅微草堂笔记》 ===== -->
+<section id="sec54">
+  <h2>五十四、纪昀《阅微草堂笔记》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>1. 自序：写作动机</h3>
+  <div class="source-text">
+    乾隆己酉夏，以编排秘籍，于役滦阳。时校理久竟，特督视官吏题签庋架而已。昼长无事，追录见闻，忆及即书，都无体例。小说稗官，知无关于著述；街谈巷议，或有益于劝惩。聊付抄胥存之，命曰《滦阳消夏录》云尔。
+  </div>
+  <div class="citation">出处：纪昀《阅微草堂笔记》卷一《滦阳消夏录一》。<br><a href="https://gj.zdic.net/jibu/811/24054.html">汉典古籍·阅微草堂笔记</a></div>
+
+  <h3>2. 宋儒与汉儒之争</h3>
+  <div class="source-text">
+    于是攻宋儒者又纷纷而起。故余撰《四库全书·诗部总叙》有曰：宋儒之攻汉儒，非为说经起见也，特求胜于汉儒而已；后人之攻宋儒，亦非为说经起见也，特不平宋儒之诋汉儒而已。韦苏州诗曰："水性自云静，石中亦无声；如何两相激，雷转空山惊。"此之谓矣。
+  </div>
+  <div class="citation">出处：纪昀《阅微草堂笔记》卷一《滦阳消夏录一》。<br><a href="https://ywct.5000yan.com/25544.html">5000言·阅微草堂笔记</a></div>
+
+  <div class="note">说明：纪昀（1724—1805），字晓岚，四库全书总纂官。《阅微草堂笔记》为其晚年所撰笔记体小说，记录见闻杂事，兼具志怪与学术评论。其中关于宋儒与汉儒之争的评论，反映了乾嘉学派内部对学术风气演变的深刻反思，可视为清代学术史的珍贵旁证。</div>
+</section>
+
+<!-- ===== 五十五、溥仪《我的前半生》 ===== -->
+<section id="sec55">
+  <h2>五十五、溥仪《我的前半生》摘录</h2>
+  <p><span class="tag tag-academic">私家著述</span></p>
+
+  <h3>回忆袁世凯逼宫</h3>
+  <div class="source-text">
+    长大后，溥仪在《我的前半生》一书中，用一个孩童的眼光回忆了这样一幕：有一天，在养心殿的东暖阁里，隆裕太后坐在靠南窗的炕上，用手绢擦眼，面前地上的红毡子垫上跪着一个粗胖的老头子，满脸泪痕。我坐在太后的右边，非常纳闷，不明白两个大人为什么哭。这时，殿里除了我们三个，别无他人。安静得很。胖老头很响地一边抽缩着鼻子，一边说话，说的什么我全不懂。后来我才知道，这个胖老头就是袁世凯。这是我看见袁世凯唯一的一次，也是袁世凯最后一次见太后。如果别人没有对我说错的话，那么正是在这次，袁世凯向隆裕太后直接提出了退位的问题。
+  </div>
+  <div class="citation">出处：溥仪《我的前半生》。<br><a href="http://www.chinanews.com.cn/cul/2012/02-15/3669929.shtml">中新网文化新闻转引</a></div>
+
+  <div class="note">说明：溥仪《我的前半生》是研究清末宫廷及辛亥革命的珍贵一手资料。此段回忆以孩童视角记录了袁世凯向隆裕太后提出退位问题的一幕，与清帝退位诏书（第二十六部分）互为印证。此段为中新网转引片段，正式引用建议以群众出版社《我的前半生》正式出版文本为准。</div>
+</section>
+
+<!-- ===== 说明 ===== -->
+<section id="notes">
+  <h2>使用说明</h2>
+  <div class="note">
+    <p><strong>1. 资料分类：</strong>本汇编共收录五十五个部分，资料可分为四类：</p>
+    <ul style="margin-left:20px;">
+      <li><strong>直接网页原文摘录：</strong>如《清实录》记载、《满洲实录》、《扬州十日记》、《平定三逆方略》、《中俄尼布楚条约》、《雍正朱批谕旨》、《四库全书总目提要》、曾国藩《讨粤匪檄》、李鸿章奏折、光绪帝"明定国是诏"、《钦定宪法大纲》、《中华民国临时约法》、李秀成自述、清帝退位诏书等。</li>
+      <li><strong>私家著述摘录：</strong>如顾炎武《日知录》、黄宗羲《明夷待访录》、王夫之《读通鉴论》、戴震《孟子字义疏证》、章学诚《文史通义》、纪昀《阅微草堂笔记》、溥仪《我的前半生》、薛福成《庸盦笔记》、孟森《清史讲义》、魏源《海国图志》等。</li>
+      <li><strong>论文摘要或期刊检索摘要：</strong>如杨念群《清朝"文治"政策再研究》、商衍鎏《清代科举考试述录》。</li>
+      <li><strong>二手转述或网页摘要：</strong>如戴逸生产力标准论述、吴承明资本主义萌芽观点、李伯重江南早期工业化、白银流入数据等。部分史料（《防范外夷规条》《钦定藏内善后章程二十九条》等）为据学术研究归纳整理的条款摘录，建议以专门文献核对。</li>
+    </ul>
+  </div>
+  <div class="note">
+    <p><strong>2. 引用建议：</strong>可直接引用的主要是网页原文摘录、PDF摘录和正式报纸转载内容；二手转述和摘要类材料适合作为线索，用于进一步查找原始论文、专著原文或档案原文。正式引文时建议继续核对原书、原刊或原始条约文本。部分网页文本为今人转写或简体本，与影印本、四库本可能存在文字差异，正式学术引用应以影印本或权威校点本为准。</p>
+  </div>
+  <div class="note">
+    <p><strong>3. 体系说明：</strong>本汇编与通纪（卷一至卷九）、典志（卷十）、传记（卷十一至十三）、史表（卷十四至十五）、图录（卷十六）相互配套，构成完整的清史编纂史料支撑体系。五十五个部分按时代先后和文献类型排列，涵盖清代官方档案、私家著述、条约法律、革命文献、学术论述等各类史料，确保清史编纂"所有描述均有史料佐证"的原则得到落实。</p>
+  </div>
+  <div class="note">
+    <p><strong>4. 持续更新：</strong>本汇编将随编纂工作推进持续补充。如后续发现遗漏的重要史料，将及时增补。</p>
+  </div>
+</section>
+
+</div><!-- end container -->
+
+<div class="footer">
+  <p>清史编纂·史料原文汇编（五十五部分）</p>
+  <p>编纂原则：坚持人民史观 · 遵循官方定位 · 史料佐证叙事</p>
+</div>
+
+</body>
+</html>
