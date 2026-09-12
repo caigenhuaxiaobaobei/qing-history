@@ -1,0 +1,732 @@
+/* ===== 清史 · 线装本古籍样式 ===== */
+/* 正文横排，版面取古籍线装本之意趣 */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --paper: #f0e6d2;
+  --paper-dark: #e8dcc0;
+  --paper-light: #f5efe0;
+  --ink: #2c1e10;
+  --ink-light: #5c4a32;
+  --ink-faint: #8b7355;
+  --vermilion: #8b1a1a;
+  --vermilion-light: #a02828;
+  --border: #b8a078;
+  --border-light: #d4c5a0;
+}
+
+body {
+  font-family: "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", "Source Han Serif SC", serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 2;
+  /* 宣纸纹理 */
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(139,115,85,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(139,115,85,0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* ===== 线装本页面框架 ===== */
+.book-page {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 60px 70px 50px;
+  background: var(--paper-light);
+  position: relative;
+  /* 双线边框 */
+  border: 1px solid var(--border);
+  box-shadow:
+    inset 0 0 0 6px var(--paper-light),
+    inset 0 0 0 7px var(--border-light),
+    0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* 书脊装饰（左侧） */
+.book-page::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  bottom: 40px;
+  width: 1px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    var(--border-light) 10%,
+    var(--border-light) 90%,
+    transparent 100%);
+}
+
+/* 版心上方的鱼尾装饰 */
+.fish-tail-top {
+  text-align: center;
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-top: 5px;
+}
+.fish-tail-top::before,
+.fish-tail-top::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: var(--border-light);
+}
+.fish-tail-top::before { left: 0; }
+.fish-tail-top::after { right: 0; }
+
+/* 版心下方的鱼尾装饰和页码 */
+.fish-tail-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-faint);
+  letter-spacing: 2px;
+  margin-top: 35px;
+  position: relative;
+  padding-bottom: 5px;
+}
+.fish-tail-bottom::before,
+.fish-tail-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  width: 38%;
+  height: 1px;
+  background: var(--border-light);
+}
+.fish-tail-bottom::before { left: 0; }
+.fish-tail-bottom::after { right: 0; }
+
+/* ===== 卷标题 ===== */
+.volume-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.volume-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--vermilion) 20%,
+    var(--vermilion) 80%,
+    transparent 100%);
+}
+
+.volume-title {
+  font-size: 2em;
+  color: var(--vermilion);
+  letter-spacing: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+.volume-subtitle {
+  font-size: 1.05em;
+  color: var(--ink-light);
+  letter-spacing: 4px;
+}
+
+/* ===== 编纂原则框 ===== */
+.principles-box {
+  background: var(--paper);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--vermilion);
+  padding: 14px 22px;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+  color: var(--ink-light);
+  line-height: 1.9;
+}
+.principles-box strong {
+  color: var(--vermilion);
+  font-weight: 600;
+}
+
+/* ===== 章节 ===== */
+.chapter {
+  margin-bottom: 35px;
+}
+
+h2 {
+  font-size: 1.4em;
+  color: var(--vermilion);
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  position: relative;
+  border-bottom: none;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 0.4em;
+  width: 8px;
+  height: 8px;
+  background: var(--vermilion);
+  border-radius: 50%;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    var(--border) 0%,
+    var(--border-light) 40%,
+    transparent 100%);
+}
+
+h3 {
+  font-size: 1.15em;
+  color: var(--ink);
+  margin: 22px 0 10px;
+  font-weight: 600;
+  padding-left: 14px;
+  position: relative;
+}
+h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  background: var(--ink-faint);
+}
+
+h4 {
+  font-size: 1em;
+  color: var(--ink-light);
+  margin: 16px 0 6px;
+  font-weight: 600;
+}
+
+/* ===== 正文 ===== */
+p {
+  margin-bottom: 14px;
+  text-indent: 2em;
+  text-align: justify;
+}
+p.no-indent { text-indent: 0; }
+
+/* ===== 史料出处 ===== */
+.source-note {
+  font-size: 0.85em;
+  color: var(--ink-faint);
+  margin: 2px 0 14px;
+  padding: 8px 14px;
+  background: var(--paper);
+  border-left: 2px solid var(--border-light);
+  line-height: 1.8;
+}
+.source-note a {
+  color: var(--vermilion-light);
+  text-decoration: none;
+}
+.source-note a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 引用块 ===== */
+.quote-block {
+  background: var(--paper);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--ink-faint);
+  padding: 14px 22px;
+  margin: 14px 0;
+  font-size: 0.93em;
+  line-height: 1.9;
+  color: var(--ink-light);
+  position: relative;
+}
+.quote-block::before {
+  content: "「";
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  font-size: 1.5em;
+  color: var(--border-light);
+  background: var(--paper-light);
+  padding: 0 6px;
+}
+.quote-source {
+  display: block;
+  text-align: right;
+  font-size: 0.88em;
+  color: var(--ink-faint);
+  margin-top: 8px;
+}
+
+/* ===== 人民史观/点评框 ===== */
+.people-view {
+  background: var(--paper);
+  border: 1px dashed var(--border);
+  padding: 12px 18px;
+  margin: 14px 0;
+  font-size: 0.9em;
+  position: relative;
+}
+.people-view-title {
+  font-weight: 600;
+  color: var(--vermilion);
+  margin-bottom: 4px;
+  font-size: 0.95em;
+}
+
+/* ===== 表格 ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 0.9em;
+}
+th, td {
+  border: 1px solid var(--border-light);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--paper);
+  color: var(--ink-light);
+  font-weight: 600;
+}
+tr:nth-child(even) td {
+  background: rgba(184, 160, 120, 0.08);
+}
+
+/* ===== 大事年表 ===== */
+.timeline-section {
+  background: var(--paper);
+  border: 1px solid var(--border-light);
+  padding: 24px 28px;
+  margin-top: 25px;
+}
+.timeline-section h2 {
+  margin-bottom: 14px;
+}
+.timeline-section table {
+  font-size: 0.88em;
+}
+.timeline-section td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--vermilion);
+  width: 110px;
+}
+
+/* ===== 页脚 ===== */
+.book-footer {
+  text-align: center;
+  padding: 20px 0 10px;
+  color: var(--ink-faint);
+  font-size: 0.82em;
+  letter-spacing: 2px;
+}
+
+/* ===== 竖版目录页专用（横排文字，竖版版面） ===== */
+.toc-vertical {
+  max-width: 880px;
+  margin: 40px auto;
+  padding: 70px 60px 60px;
+  background: var(--paper-light);
+  position: relative;
+  border: 1px solid var(--border);
+  box-shadow:
+    inset 0 0 0 8px var(--paper-light),
+    inset 0 0 0 9px var(--border-light),
+    0 2px 15px rgba(0,0,0,0.1);
+  min-height: 900px;
+}
+.toc-vertical-title {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 16px;
+  color: var(--vermilion);
+  font-weight: 700;
+  margin-bottom: 8px;
+  position: relative;
+}
+.toc-vertical-title::before,
+.toc-vertical-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: var(--border-light);
+}
+.toc-vertical-title::before { left: 0; }
+.toc-vertical-title::after { right: 0; }
+
+.toc-vertical-subtitle {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: var(--ink-faint);
+  margin-bottom: 35px;
+}
+
+/* 目录单列排版 */
+.toc-columns {
+  display: block;
+  padding: 0 30px;
+}
+
+.toc-col {
+  margin-bottom: 24px;
+}
+
+.toc-col-title {
+  font-size: 17px;
+  color: var(--vermilion);
+  font-weight: 600;
+  letter-spacing: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  padding-left: 10px;
+}
+.toc-col-title::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 3px;
+  bottom: 6px;
+  width: 3px;
+  background: var(--vermilion);
+}
+
+.toc-col-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink);
+}
+.toc-col-items li {
+  padding: 6px 0;
+  border-bottom: 1px dotted var(--border-light);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.toc-col-items li:last-child { border-bottom: none; }
+.toc-col-items a {
+  color: var(--ink);
+  text-decoration: none;
+  flex: 1;
+}
+.toc-col-items a:hover {
+  color: var(--vermilion);
+}
+.toc-col-items .vol-page {
+  color: var(--ink-faint);
+  font-size: 0.88em;
+  min-width: 40px;
+  text-align: right;
+  font-family: "Noto Serif CJK SC", serif;
+}
+
+.toc-vertical-footer {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-light);
+  font-size: 12px;
+  color: var(--ink-faint);
+  letter-spacing: 4px;
+}
+
+/* 朱红印章——标准两列私印样式 */
+.toc-vertical-seal {
+  position: absolute;
+  top: 50px;
+  right: 65px;
+  width: 64px;
+  height: 64px;
+  border: 3px solid #c94444;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,68,68,0.06);
+  transform: rotate(-2deg);
+  opacity: 0.85;
+  padding: 4px;
+}
+.toc-seal-inner {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  font-family: "STKaiti", "KaiTi", "楷体", serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #c94444;
+  line-height: 1;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+.toc-seal-inner span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 右列上：星，右列下：禾；左列上：之，左列下：印 */
+/* 即从上到下、从右到左读：星禾之印 */
+
+/* ===== 图录专用 ===== */
+.image-entry {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed var(--border-light);
+}
+.image-entry:last-child {
+  border-bottom: none;
+}
+.image-title {
+  font-size: 1.15em;
+  color: var(--vermilion);
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.image-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+}
+.image-caption {
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--ink-light);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.image-desc {
+  text-indent: 2em;
+  margin-bottom: 8px;
+}
+.image-source {
+  font-size: 0.85em;
+  color: var(--ink-faint);
+  padding-left: 12px;
+  border-left: 2px solid var(--border-light);
+}
+.image-placeholder {
+  background: var(--paper);
+  border: 1px dashed var(--border);
+  padding: 30px;
+  text-align: center;
+  color: var(--ink-faint);
+  margin-bottom: 12px;
+  font-size: 0.9em;
+}
+.pending-note {
+  font-size: 0.85em;
+  color: var(--ink-faint);
+  padding: 6px 12px;
+  background: var(--paper);
+  margin-bottom: 10px;
+}
+
+/* ===== 线装书封面 ===== */
+.cover-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, transparent 70%),
+    linear-gradient(135deg, #1a3a5c 0%, #0d2540 50%, #0a1e35 100%);
+  color: #f5e6c8;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+/* 封面主体——仿线装书 */
+.cover-book {
+  width: 520px;
+  height: 720px;
+  background: linear-gradient(135deg, #1e4068 0%, #152e4d 50%, #0f2540 100%);
+  position: relative;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5),
+    inset 2px 0 4px rgba(255,255,255,0.05),
+    inset -2px 0 4px rgba(0,0,0,0.3);
+  border-radius: 2px;
+}
+
+/* 布纹纹理 */
+.cover-book::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg,
+      transparent 0px,
+      rgba(255,255,255,0.02) 1px,
+      transparent 2px,
+      transparent 5px),
+    repeating-linear-gradient(0deg,
+      transparent 0px,
+      rgba(0,0,0,0.05) 1px,
+      transparent 2px,
+      transparent 5px);
+  pointer-events: none;
+}
+
+/* 书脊装饰 */
+.cover-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: linear-gradient(90deg,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.1) 50%,
+    transparent 100%);
+}
+.cover-spine::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  bottom: 30px;
+  width: 2px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(201,169,97,0.3) 10%,
+    rgba(201,169,97,0.3) 90%,
+    transparent 100%);
+}
+
+/* 书签条（签条） */
+.cover-label {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  background: linear-gradient(180deg, #f0e6d0 0%, #e8dcc0 100%);
+  border: 1px solid #c9a961;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow:
+    2px 2px 8px rgba(0,0,0,0.3),
+    inset 0 0 0 2px #f5efe0;
+}
+.cover-label-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #152e4d;
+  letter-spacing: 20px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin: 0 auto;
+  display: block;
+  line-height: 1.2;
+}
+.cover-label-sub {
+  font-size: 13px;
+  color: #5c4a32;
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+
+/* 底部信息 */
+.cover-bottom-info {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #c9a961;
+  font-size: 13px;
+  letter-spacing: 6px;
+  opacity: 0.7;
+}
+.cover-bottom-info .compiler {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #d4b87a;
+  opacity: 0.9;
+}
+
+/* 印章 */
+.cover-seal {
+  position: absolute;
+  bottom: 140px;
+  right: 80px;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #c94444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #c94444;
+  letter-spacing: 3px;
+  transform: rotate(-5deg);
+  opacity: 0.85;
+  background: rgba(201,68,68,0.05);
+}
+
+/* 右上角小标签 */
+.cover-top-tag {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  font-size: 12px;
+  color: #c9a961;
+  letter-spacing: 4px;
+  opacity: 0.6;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  .book-page {
+    margin: 10px;
+    padding: 40px 25px 30px;
+  }
+  .volume-title {
+    font-size: 1.5em;
+    letter-spacing: 6px;
+  }
+  .cover-title-main {
+    font-size: 56px;
+    letter-spacing: 20px;
+  }
+  .toc-list { padding-left: 20px; }
+  .toc-list .vol-desc { display: none; }
+}
